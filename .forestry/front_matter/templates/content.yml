@@ -1,0 +1,244 @@
+---
+label: Content
+hide_body: false
+fields:
+  - name: main_site_heading
+    type: text
+    config:
+      required: false
+    label: Main Site Heading
+  - name: main_site_subheading
+    type: text
+    config:
+      required: false
+    label: Main Site Subheading
+  - name: property_address
+    type: text
+    config:
+      required: false
+    label: Form Property Address
+  - name: form_phone_number
+    type: text
+    config:
+      required: false
+    label: Form Phone Number
+  - name: form_email
+    type: text
+    config:
+      required: false
+    label: Form Email
+  - name: button_text
+    type: text
+    config:
+      required: false
+    label: Button Text
+  - name: explain_the_process
+    type: text
+    config:
+      required: false
+    label: Explain The Process
+  - name: explain_the_process_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Explain The Process Content
+  - name: learn_how_it_works
+    type: text
+    config:
+      required: false
+    label: Learn How It Works
+  - name: learn_how_it_works_content
+    type: text
+    config:
+      required: false
+    label: Learn How It Works Content
+  - name: learn_about_us
+    type: text
+    config:
+      required: false
+    label: Learn About Us
+  - name: learn_about_us_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Learn About Us Content
+  - name: learn_how_to_sell_your_house
+    type: text
+    config:
+      required: false
+    label: Learn How To Sell Your House
+  - name: learn_how_to_sell_your_house_content
+    type: text
+    config:
+      required: false
+    label: Learn How To Sell Your House Content
+  - name: sell_your_house_the_easy_way_header
+    type: text
+    config:
+      required: false
+    label: Sell Your House The Easy Way Header
+  - name: sell_your_house_the_easy_way_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Sell Your House The Easy Way Content
+  - name: sell_your_house_the_easy_way_intro_content
+    type: text
+    config:
+      required: false
+    label: Sell Your House The Easy Way Intro Content
+  - name: list_section_header
+    type: text
+    config:
+      required: false
+    label: List Section Header
+  - name: list_section_content
+    type: text
+    config:
+      required: false
+    label: List Section Content
+  - name: left_side_of_list
+    type: list
+    config:
+      use_select: false
+      min:
+      max:
+    label: Left Side Of List
+  - name: right_side_of_list
+    type: list
+    config:
+      use_select: false
+      min:
+      max:
+    label: Right Side Of List
+  - name: any_condition_section
+    type: text
+    config:
+      required: false
+    label: Any Condition Header
+  - name: any_condition_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Any Condition Content
+  - name: any_situation_header
+    type: text
+    config:
+      required: false
+    label: Any Situation Header
+  - name: any_situation_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Any Situation Content
+  - name: people_love_us_header
+    type: text
+    config:
+      required: false
+    label: People Love Us Header
+  - name: featured_testimonial_1
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Featured Testimonial 1
+  - name: featured_testimonial_1_name
+    type: text
+    config:
+      required: false
+    label: Featured Testimonial 1 name
+  - name: featured_testimonial_2
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Featured Testimonial 2
+  - name: featured_testimonial_2_name
+    type: text
+    config:
+      required: false
+    label: Featured Testimonial 2 name
+  - name: featured_testimonial_3
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Featured Testimonial 3
+  - name: featured_testimonial_3_name
+    type: text
+    config:
+      required: false
+    label: Featured Testimonial 3 name
+  - name: benefit_you_offer_header
+    type: text
+    config:
+      required: false
+    label: Benefit You Offer Header
+  - name: benefit_you_offer_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Benefit You Offer Content
+  - name: benefits_list_left_side
+    type: list
+    config:
+      use_select: false
+      min:
+      max:
+    label: Benefits List Left Side
+  - name: benefits_list_right_side
+    type: list
+    config:
+      use_select: false
+      min:
+      max:
+    label: Benefits List Right Side
+  - name: conclusion_header
+    type: text
+    config:
+      required: false
+    label: Conclusion Header
+  - name: conclusion_content
+    type: textarea
+    default: ""
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Conclusion Content
+pages:
+  - src/content/content.json
