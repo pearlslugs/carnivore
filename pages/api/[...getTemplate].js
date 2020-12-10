@@ -7,8 +7,9 @@ const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supaBaseUrl, supabaseKey);
 
 export default async (req, res) => {
-  const id = req.query.getTemplate[req.query.getTemplate.length - 1];
+  const template = req.body.params;
   const { data, error } = await supabase.from("template-test").select(`*`);
-  const match = data.find((set) => set.id === Number(id));
+  const match = data.find((set) => set.Template_Name === template);
+  console.log(match.template)
   res.status(200).json(match.template);
 };

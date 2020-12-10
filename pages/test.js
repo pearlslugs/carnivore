@@ -49,11 +49,12 @@ export default function MdxTest({ source }) {
 
 export async function getStaticProps() {
   const fs = require("fs");
+  const yaml = require('js-yaml')
 
+  let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
   let yamlContent = await fs.readFileSync("src/content/content.yml", "utf8");
 
-  console.log()
-  const template = await services.getTemplates(1)
+  const template = await services.getTemplates(personal.template)
   .then((data) => {
     return data;
   });
