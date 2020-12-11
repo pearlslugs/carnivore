@@ -1,4 +1,72 @@
 ---
 label: About Us Page
 hide_body: false
-fields: []
+fields:
+- name: hero_header
+  type: text
+  config:
+    required: false
+  label: Hero Header
+- name: hero_content
+  type: text
+  config:
+    required: false
+  label: Hero Content
+- name: sell_your_house_in_three_easy_steps_header
+  type: text
+  config:
+    required: false
+  label: Sell Your House In Three Easy Steps Header
+- name: sell_your_house_in_three_easy_steps_content
+  type: text
+  config:
+    required: false
+  label: Sell Your House In Three Easy Steps Content
+- name: first_image_header
+  type: text
+  config:
+    required: false
+  label: Number One Haader
+  description: Direct the traffic to fill in the form.
+- name: number_one_image
+  type: text
+  config:
+    required: false
+  label: Number One Image
+- name: number_one_content
+  type: text
+  config:
+    required: false
+  label: Number One Content
+- name: number_two_header
+  type: text
+  config:
+    required: false
+  label: Number Two Header
+  description: Tell the traffic about what happens after they fill out the form
+- name: number_two_image
+  type: text
+  config:
+    required: false
+  label: Number Two Image
+- name: number_two_content
+  type: text
+  config:
+    required: false
+  label: Number Two Content
+- name: number_three_header
+  type: text
+  config:
+    required: false
+  label: Number Three Header
+  description: Tell your traffic how easy it is to get their money
+- name: number_three_image
+  type: text
+  config:
+    required: false
+  label: Number Three Image
+- name: number_three_content
+  type: text
+  config:
+    required: false
+  label: Number Three Content
