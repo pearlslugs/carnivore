@@ -96,6 +96,9 @@ conclusion_content:
   them to the next part of the process… the how it works page perhaps? Remember this
   is strategic. We don’t do random, and everything you do needs to have a solid reason
   or motive behind it!
+primary_color: "#DD6B20"
+secondary_color: "#307DCF"
+accent_color: "#DD6B20"
 ---
 <div>
 <Box padding-right="15px" padding-left="15px" margin-right="auto" margin-left="auto"  width="90vw" position="relative" right="75vw" left="5vw"> 
@@ -121,7 +124,7 @@ conclusion_content:
       <Link color="whiteAlpha.900">Our Company</Link>
       <Link color="whiteAlpha.900">About Us</Link>
       <Link
-        backgroundColor="orange.500"
+        backgroundColor={primary_color}
         color="whiteAlpha.900"
         p={3}
         borderRadius="5px"
@@ -177,7 +180,7 @@ conclusion_content:
         variant="solid"
         size="md"
         width="100%"
-        backgroundColor="orange.500"
+        backgroundColor={primary_color}
         color="whiteAlpha.900"
       >
         {button_text}
@@ -283,7 +286,7 @@ conclusion_content:
               variant="solid"
               size="md"
               width="100%"
-              backgroundColor="orange.500"
+              backgroundColor={primary_color}
               color="whiteAlpha.900"
             >
               {button_text}
@@ -505,7 +508,7 @@ conclusion_content:
         variant="solid"
         size="md"
         width="100%"
-        backgroundColor="orange.500"
+        backgroundColor={primary_color}
         color="whiteAlpha.900"
       >
         {button_text}

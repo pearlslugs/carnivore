@@ -10,6 +10,5 @@ export default async (req, res) => {
   const template = req.body.params;
   const { data, error } = await supabase.from("template-test").select(`*`);
   const match = data.find((set) => set.Template_Name === template);
-  console.log(match.template)
   res.status(200).json(match.template);
 };

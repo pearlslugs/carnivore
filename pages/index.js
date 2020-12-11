@@ -17,8 +17,7 @@ import {
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
 import services from "../src/communication/services";
-import content from "../src/content/content.json";
-import TemplateOne from "../src/templates/template-1";
+
 
 const HomePage = ({ template }) => {
   const testDb = (id) => {
@@ -33,7 +32,7 @@ const HomePage = ({ template }) => {
 
     return (
       <div>
-        <TemplateOne />
+
         <button onClick={() => testDb(1)}>Test</button>
       </div>
     );
