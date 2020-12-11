@@ -1,4 +1,55 @@
 ---
 label: About US Page Content
 hide_body: false
-fields: []
+fields:
+- name: hero_header
+  type: text
+  config:
+    required: false
+  label: Hero Header
+- name: hero_content
+  type: text
+  config:
+    required: false
+  label: Hero Content
+- name: introduce_company_header
+  type: text
+  config:
+    required: false
+  label: Introduce Company Header
+  description: 'example: <strong>We Are Company or Names</strong>'
+- name: introduce_company_content
+  type: text
+  config:
+    required: false
+  label: Introduce Company Content
+  description: "[TALK ABOUT YOURSELF]: This is where you tell your story and tell
+    your traffic about yourself. Talk about your “Why” and how you started this business.
+    Use images to back up your story. For example, if you talk about your family then
+    also include a photo with you and your family."
+- name: connect_with_traffic_banner
+  type: text
+  config:
+    required: false
+  label: Connect With Traffic Banner
+- name: values_header
+  type: text
+  config:
+    required: false
+  label: Values Header
+  description: 'example: <strong>Our Core Values</strong>'
+- name: values_content
+  type: text
+  config:
+    required: false
+  label: Values Content
+- name: conclusion_header
+  type: text
+  config:
+    required: false
+  label: Conclusion Header
+- name: conclusion_content
+  type: text
+  config:
+    required: false
+  label: Conclusion Content
