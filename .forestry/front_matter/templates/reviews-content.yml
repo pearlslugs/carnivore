@@ -14,11 +14,13 @@ fields:
     min: 
     max: 
   label: Review Text
-- name: reviewer_name
-  type: text
+- name: reviewer_names
+  type: list
   config:
-    required: false
-  label: Reviewer Name
+    use_select: false
+    min: 
+    max: 
+  label: Reviewer Names
 - name: reviewer_images
   type: image_gallery
   config: {}
