@@ -7,6 +7,16 @@ fields:
   config:
     required: false
   label: Hero Header
+- name: page_intro_header
+  type: text
+  config:
+    required: false
+  label: Page Intro Header
+- name: page_intro_content
+  type: text
+  config:
+    required: false
+  label: Page Intro Content
 - name: review_text
   type: list
   config:
