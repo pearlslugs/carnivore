@@ -1,4 +1,35 @@
 ---
 label: Reviews Content
 hide_body: false
-fields: []
+fields:
+- name: hero_header
+  type: text
+  config:
+    required: false
+  label: Hero Header
+- name: review_text
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Review Text
+- name: reviewer_name
+  type: text
+  config:
+    required: false
+  label: Reviewer Name
+- name: reviewer_images
+  type: image_gallery
+  config: {}
+  label: Reviewer Images
+- name: conclusion_header
+  type: text
+  config:
+    required: false
+  label: Conclusion Header
+- name: conclusion_content
+  type: text
+  config:
+    required: false
+  label: Conclusion Content
