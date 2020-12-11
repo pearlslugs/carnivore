@@ -122,3 +122,5 @@ fields:
   config:
     required: false
   label: Conclusion Content
+pages:
+- src/content/how_it_works_content.yml
