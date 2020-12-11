@@ -9,7 +9,7 @@ sections:
   label: content
   create: all
   match: "**/*"
-  new_doc_ext: json
+  new_doc_ext: yml
 upload_dir: public
 public_path: "/public"
 front_matter_path: "/public"
