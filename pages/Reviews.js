@@ -55,14 +55,16 @@ export async function getStaticProps() {
 
   let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
   let yamlContent = await fs.readFileSync("src/content/reviews_page_content.yml", "utf8");
+  let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
 
   const template = await services.getReviewsPage(personal.template)
   .then((data) => {
     return data;
   });
   const filteredYamlContent = yamlContent.split("---").join(' ')
+  const filteredColors = colors.split("---").join(' ')
  
-  const source = `---\n${filteredYamlContent}\n--- ${template}`;
+  const source = `---\n${filteredColors}\n${filteredYamlContent}\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

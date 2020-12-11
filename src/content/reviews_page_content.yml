@@ -21,11 +21,17 @@ review_text:
   deserunt mollit anim id est laborum."'
 reviewer_name: ''
 reviewer_images:
-- "/public/f06d217b6e506b307752568e0df2a88d-2.png"
-- "/public/f06d217b6e506b307752568e0df2a88d-1.png"
-- "/public/f06d217b6e506b307752568e0df2a88d.png"
-conclusion_header: ''
-conclusion_content: ''
+- "../public/f06d217b6e506b307752568e0df2a88d-2.png"
+- "../public/f06d217b6e506b307752568e0df2a88d-1.png"
+- "../public/f06d217b6e506b307752568e0df2a88d.png"
+conclusion_header: 'Header'
+conclusion_content: 'Here we write a conclusion. Never just end the page randomly. Ideally end
+with a call to action. Tell your traffic what they need to do next. Let
+there be continuation to their browsing session. Be sure you do this in
+the form of a closing statement. Recap what you do why you are a good
+choice and direct them to the next part of the process… the how it works
+page perhaps? Remember this is strategic. We don’t do random, and
+everything you do needs to have a solid reason or motive behind it!'
 reviewer_names:
 - '3'
 - '2'
