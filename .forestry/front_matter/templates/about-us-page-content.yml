@@ -53,3 +53,5 @@ fields:
   config:
     required: false
   label: Conclusion Content
+pages:
+- src/content/about_us_content.yml
