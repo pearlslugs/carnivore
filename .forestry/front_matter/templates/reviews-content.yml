@@ -33,3 +33,5 @@ fields:
   config:
     required: false
   label: Conclusion Content
+pages:
+- src/content/reviews_page_content.yml
