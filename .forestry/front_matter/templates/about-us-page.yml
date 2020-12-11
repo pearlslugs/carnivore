@@ -70,3 +70,55 @@ fields:
   config:
     required: false
   label: Number Three Content
+- name: form_section_header
+  type: text
+  config:
+    required: false
+  label: Form Section Header
+- name: form_section_content
+  type: text
+  config:
+    required: false
+  label: Form Section Content
+- name: explanation_of_the_process_header
+  type: text
+  config:
+    required: false
+  label: Explanation Of The Process Header
+- name: our_offer_banner
+  type: text
+  config:
+    required: false
+  label: Our Offer Banner
+  description: 'example: <strong>Our Offer = After Repair Value – Cost Of Repairs
+    – Selling Cost – Minimum Profit</strong>'
+- name: explain_arv
+  type: text
+  config:
+    required: false
+  label: Explain ARV
+- name: explain_selling_cost
+  type: text
+  config:
+    required: false
+  label: Explain Selling Cost
+- name: explain_cost_of_repairs
+  type: text
+  config:
+    required: false
+  label: Explain Cost Of Repairs
+- name: explain_minimum_profit
+  type: text
+  config:
+    required: false
+  label: Explain Minimum Profit
+- name: conclusion_header
+  type: text
+  config:
+    required: false
+  label: Conclusion Header
+- name: conclusion_content
+  type: text
+  config:
+    required: false
+  label: Conclusion Content
