@@ -55,6 +55,21 @@ fields:
   config:
     required: false
   label: Number Two Content
+- name: number_three_header
+  type: text
+  config:
+    required: false
+  label: Number Three Header
+- name: number_three_image
+  type: file
+  config:
+    maxSize: 64
+  label: Number Three Image
+- name: number_three_content
+  type: text
+  config:
+    required: false
+  label: Number Three Content
 - name: market_specific_feature_header
   type: text
   config:
