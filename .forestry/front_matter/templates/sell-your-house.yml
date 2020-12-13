@@ -1,4 +1,77 @@
 ---
 label: Sell Your House
 hide_body: false
-fields: []
+fields:
+- name: hero_header
+  type: text
+  config:
+    required: false
+  label: Hero Header
+- name: hero_content
+  type: text
+  config:
+    required: false
+  label: Hero Content
+- name: sell_your_house_header
+  type: text
+  config:
+    required: false
+  label: Sell Your House Header
+  description: 'example: <strong>Sell Your House In Three Easy Steps</strong>'
+- name: sell_your_house_content
+  type: text
+  config:
+    required: false
+  label: Sell Your House Content
+  description: Explain in a short brief paragraph how these three steps will get them
+    out of their frustrating situation FAST. Explain how these steps benefit the client.
+- name: number_one_header
+  type: text
+  config:
+    required: false
+  label: Number One Header
+- name: number_one_image
+  type: file
+  config:
+    maxSize: 64
+  label: Number One Image
+- name: number_one_content
+  type: text
+  config:
+    required: false
+  label: Number One Content
+- name: number_two_header
+  type: text
+  config:
+    required: false
+  label: Number Two Header
+- name: number_two_image
+  type: file
+  config:
+    maxSize: 64
+  label: Number Two Image
+- name: number_two_content
+  type: text
+  config:
+    required: false
+  label: Number Two Content
+- name: market_specific_feature_header
+  type: text
+  config:
+    required: false
+  label: Market Specific Feature Header
+- name: market_specific_feature_content
+  type: text
+  config:
+    required: false
+  label: Market Specific Feature Content
+- name: conclusion_header
+  type: text
+  config:
+    required: false
+  label: Conclusion Header
+- name: conclusion_content
+  type: text
+  config:
+    required: false
+  label: Conclusion Content
