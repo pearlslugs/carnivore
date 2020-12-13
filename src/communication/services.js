@@ -8,12 +8,8 @@ const getUser = (email) => {
     return request.then(res => res.data);
 }
 
-const getTemplates = (template) => {
-    const request = axios.get(templateUrl, {data: {params: {template, page: "template"}} });
+const getPage = (template, page) => {
+    const request = axios.get(templateUrl, {data: {params: {template, page: page}} });
     return request.then(res => res.data)
 }
-const getReviewsPage = (template) => {
-    const request = axios.get(templateUrl, {data: {params: {template, page: "reviews"} }});
-    return request.then(res => res.data)
-}
-export default {getTemplates, getUser, getReviewsPage}
+export default {getPage}

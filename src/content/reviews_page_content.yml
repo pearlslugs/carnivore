@@ -1,5 +1,9 @@
 ---
-hero_header: ''
+hero_header: 'What Others Have To Say'
+page_intro_header: 'We Care About Our Customers'
+page_intro_content: 'Yeah, totally... laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+  irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+  pariatur. Excepteur sint occaecat cupidatat non'
 review_text:
 - '"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
@@ -21,9 +25,9 @@ review_text:
   deserunt mollit anim id est laborum."'
 reviewer_name: ''
 reviewer_images:
-- "../public/f06d217b6e506b307752568e0df2a88d-2.png"
-- "../public/f06d217b6e506b307752568e0df2a88d-1.png"
-- "../public/f06d217b6e506b307752568e0df2a88d.png"
+- "/f06d217b6e506b307752568e0df2a88d-2.png"
+- "/f06d217b6e506b307752568e0df2a88d-1.png"
+- "/f06d217b6e506b307752568e0df2a88d.png"
 conclusion_header: 'Header'
 conclusion_content: 'Here we write a conclusion. Never just end the page randomly. Ideally end
 with a call to action. Tell your traffic what they need to do next. Let

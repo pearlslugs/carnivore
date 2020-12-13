@@ -17,4 +17,8 @@ export default async (req, res) => {
     console.log(match.reviews)
     res.status(200).json(match.reviews);
   }
+  if(template.page === "how_it_works"){
+    console.log(match.reviews)
+    res.status(200).json(match.how_it_works);
+  }
 };

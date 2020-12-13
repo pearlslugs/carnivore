@@ -20,7 +20,6 @@ import {
   Divider,
   ListItem,
   IconButton,
-  Center
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
 
@@ -40,7 +39,6 @@ const components = {
   ListItem,
   IconButton,
   CopyIcon,
-  Center
 };
 
 export default function HomePage({ source }) {
@@ -54,17 +52,16 @@ export async function getStaticProps() {
   const yaml = require('js-yaml')
 
   let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
-  let yamlContent = await fs.readFileSync("src/content/reviews_page_content.yml", "utf8");
+  let yamlContent = await fs.readFileSync("src/content/how_it_works_content.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
 
-  const template = await services.getPage(personal.template, 'reviews')
+  const template = await services.getPage(personal.template, 'how_it_works')
   .then((data) => {
     return data;
   });
   const filteredYamlContent = yamlContent.split("---").join(' ')
   const filteredColors = colors.split("---").join(' ')
- 
-  const source = `---\n${filteredColors}\n${filteredYamlContent}\n--- ${template}`;
+  const source = `---\n${filteredYamlContent}\n${filteredColors}\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

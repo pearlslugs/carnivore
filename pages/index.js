@@ -56,7 +56,7 @@ export async function getStaticProps() {
   let altText = await fs.readFileSync("src/content/alt-tags.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
 
-  const template = await services.getTemplates(personal.template)
+  const template = await services.getPage(personal.template, 'template')
   .then((data) => {
     return data;
   });

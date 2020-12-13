@@ -67,15 +67,19 @@ const App = () => (
         </Box>
       </Box>
     </Box>
+    <Box display="flex" flexDirection="column" alignItems="center" justifyContent="center">
+      <Box width="80%">
     <Heading textAlign="center" as="h2" mt={5}>
       Sell Your House In Three Easy Steps
     </Heading>
-    <Text mt={5}>
+    <Text textAlign="center" mt={5}>
       {' '}
       Explain in a short brief paragraph how these three steps will get them out
       of their frustrating situation FAST. Explain how these steps benefit the
       client.
     </Text>
+    </Box>
+    </Box>
     <Box display="flex" m={5} justifyContent="space-between" p={20}>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Heading as="h2" size="md">

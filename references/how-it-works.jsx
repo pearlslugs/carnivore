@@ -1,22 +1,76 @@
-import React from 'react'
-import {
-  ChakraProvider,
-  Box,
-  Image,
-  List,
-  Link,
-  Heading,
-  Text,
-  FormErrorMessage,
-  FormLabel,
-  Input,
-  Button,
-  FormControl,
-  IconButton
-} from '@chakra-ui/react'
-import { CopyIcon } from '@chakra-ui/icons'
+---
+hero_header: Hero Header
+hero_content: us error sit voluptatem accusantium doloremque laudantium, totam rem
+  aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+  vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+  consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+  labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+  nostrum exerc
+sell_your_house_in_three_easy_steps_header: Sell Your House In Three Easy Steps
+sell_your_house_in_three_easy_steps_content: us error sit voluptatem accusantium doloremque
+  laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+  architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas
+  sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+  voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+  sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt
+  ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
+  quis nostrum exerc
+first_image_header: Fill Out The Form
+number_one_image: ''
+number_one_content: us error sit voluptatem accusantium doloremque laudantium, totam
+  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+  vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+  consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+  labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+  nostrum exerc
+number_two_header: Get Your Offer
+number_two_image: ''
+number_two_content: us error sit voluptatem accusantium doloremque laudantium, totam
+  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+  vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+  consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+  labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+  nostrum exerc
+number_three_header: Get Paid In Spiders
+number_three_image: ''
+number_three_content: us error sit voluptatem accusantium doloremque laudantium, totam
+  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+  vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+  consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+  labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+  nostrum exerc
+form_section_header: I am an octopus
+form_section_content: us error sit voluptatem accusantium doloremque laudantium, totam
+  rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
+  vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur
+  aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+  sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+  consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+  labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis
+  nostrum exerc
+explanation_of_the_process_header: Explanation Of The Process
+our_offer_banner: Our Offer = After Repair Value – Cost Of Repairs – Selling Cost
+  – Minimum Profit
+explain_arv: Astronaut robot vultures are cool Our Offer = After Repair Value – Cost
+  Of Repairs – Selling Cost – Minimum Profit
+explain_selling_cost: it costs us money to  make money and you have to pay it
+explain_cost_of_repairs: you pay for it and we profit
+explain_minimum_profit: we take as much as we can possibly squeeze out of you
+conclusion_header: screw you
+conclusion_content: She tried to explain that love wasn't like pie. There wasn't a
+  set number of slices to be given out. There wasn't less to be given to one person
+  if you wanted to give more to another. That after a set amount was given out it
+  would all disappear. She tried to explain this, but it fell on deaf ears.
 
-const App = () => (
+
   <ChakraProvider resetCSS>
     <Box>
       <Box
@@ -52,10 +106,10 @@ const App = () => (
           color="whiteAlpha.900"
           fontWeight="bold"
         >
-          How To Sell Your House
+          {hero_header}
         </Heading>
         <Text textAlign="center" mt={5} color="whiteAlpha.900">
-          We Buy Houses In Any Condition!
+          {hero_content}
         </Text>
         <Box display="flex" justifyContent="center" mt={20}>
           <IconButton
@@ -68,28 +122,26 @@ const App = () => (
       </Box>
     </Box>
     <Heading textAlign="center" as="h2" mt={5}>
-      Sell Your House In Three Easy Steps
+      {sell_your_house_in_three_easy_steps_header}
     </Heading>
     <Text mt={5}>
       {' '}
-      Explain in a short brief paragraph how these three steps will get them out
-      of their frustrating situation FAST. Explain how these steps benefit the
-      client.
+      {sell_your_house_in_three_easy_steps_content}
     </Text>
     <Box display="flex" m={5} justifyContent="space-between" p={20}>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Heading as="h2" size="md">
-          Fill In The Form
+          {first_image_header}
         </Heading>
-        <Image height="100px" width="100px" mt={5} />
-        <Text mt={5}>Text value</Text>
+        <Image src={number_one_image} height="100px" width="100px" mt={5} />
+        <Text mt={5}>{number_one_content}</Text>
       </Box>
       <Box display="flex" alignItems="center" flexDirection="column">
         <Heading as="h2" size="md">
-          Receive Our Offer
+          {number_two_header}
         </Heading>
         <Image height="100px" width="100px" mt={5} />
-        <Text mt={5}>Text value</Text>
+        <Text mt={5}>{number_two_content}</Text>
       </Box>
       <Box
         display="flex"
@@ -98,10 +150,10 @@ const App = () => (
         alignItems="center"
       >
         <Heading as="h2" size="md">
-          Get Your Cash
+          {number_three_header}
         </Heading>
         <Image height="100px" width="100px" mt={5} />
-        <Text mt={5}>Text value</Text>
+        <Text mt={5}>{number_three_content}</Text>
       </Box>
     </Box>
     <Box
@@ -113,12 +165,10 @@ const App = () => (
     >
       <Box width="50%" mt={5} mb={5}>
         <Heading ml={5}>
-          [TELL YOUR TRAFFIC ABOUT THE OFFER THEY WILL GET]: We Always Make Fair
-          Cash Offers!
+          {form_section_header}
         </Heading>
         <Text mt={5} ml={5}>
-          [BUILD TRUST]: Explain in more detail about cash offers or your fair
-          offer.2
+          {form_section_content}
         </Text>
       </Box>
       <Box display="flex" justifyContent="center" width="45%" mt={5} mb={5}>
@@ -159,7 +209,7 @@ const App = () => (
       </Box>
     </Box>
     <Heading mt={10} textAlign="center">
-      Here is How We Calculate Your Cash Offer
+      {explanation_of_the_process_header}
     </Heading>
     <Box backgroundColor="blackAlpha.400" mt={5} p={14} ml={10} mr={10}>
       <Text
@@ -168,55 +218,38 @@ const App = () => (
         textAlign="center"
         fontSize="30px"
       >
-        Our Offer = After Repair Value – Cost Of Repairs – Selling Cost –
-        Minimum Profit
+        {our_offer_banner}
       </Text>
     </Box>
     <Box display="flex" alignItems="flex-start" justifyContent="space-around">
       <Box width="35%">
         <Text mt={10} ml={5} mr={5}>
-          ARV (After Repair Value) – This is the price after we buy it from you,
-          we fix it up, and sell it on the market. This price is based off of
-          recent sold homes within your neighborhood that were renovated.
+          {explain_arv}
         </Text>
       </Box>
       <Box width="35%">
         <Text mt={10} ml={5} mr={5}>
-          Cost of Repairs (After Repair Value) – This is the price after we buy
-          it from you, we fix it up, and sell it on the market. This price is
-          based off of recent sold homes within your neighborhood that were
-          renovated.
+          {explain_cost_of_repairs}
         </Text>
       </Box>
     </Box>
     <Box display="flex" alignItems="flex-start" justifyContent="space-around">
       <Box width="35%">
         <Text mt={10} ml={5} mr={5}>
-          Selling Cost (After Repair Value) – This is the price after we buy it
-          from you, we fix it up, and sell it on the market. This price is based
-          off of recent sold homes within your neighborhood that were renovated.
+          {explain_selling_cost}
         </Text>
       </Box>
       <Box width="35%">
         <Text mt={10} ml={5} mr={5}>
-          Minimum Profit (After Repair Value) – This is the price after we buy
-          it from you, we fix it up, and sell it on the market. This price is
-          based off of recent sold homes within your neighborhood that were
-          renovated.
+          {explain_minimum_profit}
         </Text>
       </Box>
     </Box>
     <Heading mt={20} as="h2" textAlign="center">
-      [ADD A GOOD CONCLUSION/RECAP TITLE]
+      {conclusion_header}
     </Heading>
     <Text mt={5} fontStyle="italic" ml={5} mr={5}>
-      Here we write a conclusion. Never just end the page randomly. Ideally end
-      with a call to action. Tell your traffic what they need to do next. Let
-      there be continuation to their browsing session. Be sure you do this in
-      the form of a closing statement. Recap what you do why you are a good
-      choice and direct them to the next part of the process… the how it works
-      page perhaps? Remember this is strategic. We don’t do random, and
-      everything you do needs to have a solid reason or motive behind it!
+      {conclusion_content}
     </Text>
     <FormControl
       mt={10}
