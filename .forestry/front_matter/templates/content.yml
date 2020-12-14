@@ -240,3 +240,43 @@ fields:
     schema:
       format: markdown
   label: Conclusion Content
+- name: learn_how_it_works_image
+  type: file
+  config:
+    maxSize: 64
+  label: Learn How It Works Image
+- name: learn_about_us_image
+  type: file
+  config:
+    maxSize: 64
+  label: Learn About Us Image
+- name: learn_how_to_sell_your_house_image
+  type: file
+  config:
+    maxSize: 64
+  label: Learn How To Sell Your House Image
+- name: sell_your_house_the_easy_way_image
+  type: file
+  config:
+    maxSize: 64
+  label: Sell Your House The Easy Way Image
+- name: any_condition_section_background_image
+  type: file
+  config:
+    maxSize: 64
+  label: Any Condition Section Background Image
+- name: testimonial_one_image
+  type: file
+  config:
+    maxSize: 64
+  label: Testimonial One Image
+- name: testimonial_two_image
+  type: file
+  config:
+    maxSize: 64
+  label: Testimonial Two Image
+- name: testimonial_three_image
+  type: file
+  config:
+    maxSize: 64
+  label: Testimonial Three Image
