@@ -26,4 +26,12 @@ export default async (req, res) => {
     console.log(match.reviews)
     res.status(200).json(match.about_us);
   }
+  else if(template.page === "about_us"){
+    console.log(match.reviews)
+    res.status(200).json(match.about_us);
+  }
+  else if(template.page === "sell_your_house"){
+    console.log(match.reviews)
+    res.status(200).json(match.sell_your_house);
+  }
 };

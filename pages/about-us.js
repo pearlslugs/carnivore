@@ -56,6 +56,7 @@ export async function getStaticProps() {
   let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
   let yamlContent = await fs.readFileSync("src/content/about_us_content.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
+  const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
 
   const template = await services.getPage(personal.template, 'about_us')
   .then((data) => {
@@ -63,8 +64,25 @@ export async function getStaticProps() {
   });
   const filteredYamlContent = yamlContent.split("---").join(' ')
   const filteredColors = colors.split("---").join(' ')
+  function brightnessByColor (color) {
+    var color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
+    if (isHEX) {
+      var m = color.substr(1).match(color.length == 7 ? /(\S{2})/g : /(\S{1})/g);
+      if (m) var r = parseInt(m[0], 16), g = parseInt(m[1], 16), b = parseInt(m[2], 16);
+    }
+    if (isRGB) {
+      var m = color.match(/(\d+){3}/g);
+      if (m) var r = m[0], g = m[1], b = m[2];
+    }
+    if (typeof r != "undefined") return ((r*299)+(g*587)+(b*114))/1000;
+  }
+  const primaryBrightness = brightnessByColor(colorObject.primary_color)
+  const secondaryBrightness = brightnessByColor(colorObject.secondary_color)
+  const accentBrightness = brightnessByColor(colorObject.accent_color)
+  
+  const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
  
-  const source = `---\n${filteredColors}\n${filteredYamlContent}\n--- ${template}`;
+  const source = `---\n${filteredColors}\n${filteredYamlContent}\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

@@ -1,21 +1,39 @@
-import React from 'react'
-import {
-  ChakraProvider,
-  Box,
-  Image,
-  List,
-  Link,
-  Heading,
-  Text,
-  FormLabel,
-  Input,
-  Button,
-  IconButton,
-  FormErrorMessage,
-  FormControl
-} from '@chakra-ui/react'
-import { CopyIcon } from '@chakra-ui/icons'
+import { Heading } from "@chakra-ui/react"
 
+primary_color: "#DD6B20"
+secondary_color: "#307DCF"
+accent_color: "#DD6B20"
+
+hero_header: "[KEYWORD DRIVEN]: Legitimate Home Buyers In Location"
+hero_content: No realtors, No fees, No commissions & No repairs!
+introduce_company_header: "[SHOW YOU ARE REAL HONEST PEOPLE]: We Are Company or Names"
+introduce_company_content: "[TALK ABOUT YOURSELF]: This is where you tell your story
+  and tell your traffic about yourself. Talk about your “Why” and how you started
+  this business. Use images to back up your story. For example, if you talk
+  about your family then also include a photo with you and your family."
+connect_with_traffic_banner: "[WAY TO CONNECT WITH TRAFFIC]: Explain in a brief paragraph
+  more about yourself regarding something specific to you. Talk about one
+  of your hobbies unrelated to real estate. Do you love to travel, are you
+  an avid runner, do you love sushi, or do you enjoy playing with your dog?
+  Something like this is a perfect way to connect with your traffic on
+  a more personal level and will build trust. Use images to back this up!"
+values_header: Our Values
+values_content: "[COMPANY VALUES ETC]: Explain in a brief paragraph more about your
+  company. This could be in the form of your company values/standards or your
+  company’s mission. Include info on how your company is reputable (licensed
+  business, BBB accredited, etc)."
+conclusion_header: "[ADD A GOOD CONCLUSION/RECAP TITLE]"
+conclusion_content: Here we write a conclusion. Never just end the page randomly.
+  Ideally end with a call to action. Tell your traffic what they need to do
+  next. Let there be continuation to their browsing session. Be sure you do
+  this in the form of a closing statement. Recap what you do why you are a good choice
+  and direct them to the next part of the process… the how it works page perhaps?
+  Remember this is strategic. We don’t do random, and everything you do needs
+  to have a solid reason or motive behind it!
+
+primary_brightness: 132.536
+secondary_brightness: 111.325
+accent_brightness: 132.536
 const App = () => (
   <ChakraProvider resetCSS>
     <Box>
@@ -37,7 +55,7 @@ const App = () => (
             <Link color="whiteAlpha.900">Our Company</Link>
             <Link color="whiteAlpha.900">About Us</Link>
             <Link
-              backgroundColor="orange.500"
+              backgroundColor={primary_color}
               color="whiteAlpha.900"
               p={3}
               borderRadius="5px"
@@ -52,10 +70,10 @@ const App = () => (
           color="whiteAlpha.900"
           fontWeight="bold"
         >
-          [KEYWORD DRIVEN]: Legitimate Home Buyers In Location
+          {hero_header}
         </Heading>
         <Text textAlign="center" mt={5} color="whiteAlpha.900">
-          No realtors, No fees, No commissions & No repairs!
+          {hero_content}
         </Text>
         <Box display="flex" justifyContent="center" mt={20}>
           <IconButton
@@ -68,13 +86,10 @@ const App = () => (
       </Box>
     </Box>
     <Heading textAlign="center" as="h2" mt={5}>
-      [SHOW YOU ARE REAL HONEST PEOPLE]: We Are Company or Names
+      {introduce_company_header}
     </Heading>
     <Text mt={5} ml={5} mr={5}>
-      [TALK ABOUT YOURSELF]: This is where you tell your story and tell your
-      traffic about yourself. Talk about your “Why” and how you started this
-      business. Use images to back up your story. For example, if you talk about
-      your family then also include a photo with you and your family.
+      {introduce_company_content}
     </Text>
     <FormControl
       mt={10}
@@ -88,42 +103,32 @@ const App = () => (
     <Box
       display="flex"
       justifyContent="center"
-      backgroundColor="blackAlpha.200"
+      backgroundColor={primary_color}
       ml={-3}
       mr={-3}
       mt={5}
+      paddingBottom="1rem"
     >
       <Box width="50%" mt={5} mb={5}>
-        <Text mt={5} ml={5}>
-          [WAY TO CONNECT WITH TRAFFIC]: Explain in a brief paragraph more about
-          yourself regarding something specific to you. Talk about one of your
-          hobbies unrelated to real estate. Do you love to travel, are you an
-          avid runner, do you love suchi, or do you enjoy playing with your dog?
-          Something like this is a perfect way to connect with your traffic on a
-          more personal level and will build trust. Use images to back this up!
+        <Heading textAlign="center" as="h2" mt={5} color={(primary_brightness > 180) ? "black" : "white"}>
+          Header
+        </Heading>
+        <Text mt={5} ml={5} color={(primary_brightness > 180) ? "black" : "white"}>
+          {connect_with_traffic_banner}
         </Text>
       </Box>
     </Box>
     <Heading mt={5} ml={5} mr={5} textAlign="center">
-      Core Values
+      {values_header}
     </Heading>
     <Text mt={5} ml={5} mr={5}>
-      [COMPANY VALUES ETC]: Explain in a brief paragraph more about your
-      company. This could be in the form of your company values/standards or
-      your company’s mission. Include info on how your company is reputable
-      (licensed business, BBB accredited, etc).
+      {values_content}
     </Text>
     <Heading mt={20} as="h2" textAlign="center">
-      [ADD A GOOD CONCLUSION/RECAP TITLE]
+      {conclusion_header}
     </Heading>
     <Text mt={5} fontStyle="italic" ml={5} mr={5}>
-      Here we write a conclusion. Never just end the page randomly. Ideally end
-      with a call to action. Tell your traffic what they need to do next. Let
-      there be continuation to their browsing session. Be sure you do this in
-      the form of a closing statement. Recap what you do why you are a good
-      choice and direct them to the next part of the process… the how it works
-      page perhaps? Remember this is strategic. We don’t do random, and
-      everything you do needs to have a solid reason or motive behind it!
+      {conclusion_content}
     </Text>
     <Box p={10}>
       <FormLabel>Property Address*</FormLabel>
@@ -143,7 +148,7 @@ const App = () => (
           variant="solid"
           size="md"
           width="100%"
-          backgroundColor="orange.500"
+          backgroundColor={primary_color}
           color="whiteAlpha.900"
         >
           Get My Cash Offer Now!
