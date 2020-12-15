@@ -85,15 +85,20 @@ const App = () => (
         </Box>
       </Box>
     </Box>
-    <Heading textAlign="center" as="h2" mt={5}>
+    <Heading textAlign="center" as="h2" mt={5} paddingTop="1rem">
       {introduce_company_header}
     </Heading>
-    <Text mt={5} ml={5} mr={5}>
+    <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" paddingTop="1rem">
+    <Box width="50%" flexDirection="row" justifyContent="center" alignItems="center">
+    <Image padding="auto" margin="auto" height="100px" width="100px" mt={5} justifySelf="center" />
+    </Box>
+    <Text width="38%" mt={5} ml={5} mr={5}>
       {introduce_company_content}
     </Text>
+    </Box>
     <FormControl
       mt={10}
-      width="80%"
+      width="60%"
       ml="auto"
       mr="auto"
       backgroundColor="#f5f5f5"
@@ -121,16 +126,21 @@ const App = () => (
     <Heading mt={5} ml={5} mr={5} textAlign="center">
       {values_header}
     </Heading>
-    <Text mt={5} ml={5} mr={5}>
+    <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center">
+    <Text mt={5} ml={5} mr={5} width="75%">
       {values_content}
     </Text>
+    </Box>
     <Heading mt={20} as="h2" textAlign="center">
       {conclusion_header}
     </Heading>
-    <Text mt={5} fontStyle="italic" ml={5} mr={5}>
+    <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center">
+    <Text mt={5} fontStyle="italic" ml={5} mr={5} width="75%">
       {conclusion_content}
     </Text>
-    <Box p={10}>
+    </Box>
+    <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center">
+    <Box p={10} width="75%">
       <FormLabel>Property Address*</FormLabel>
       <Input backgroundColor="#ffffff" />
       <Box display="flex" justifyContent="space-between" p={0} m={0}>
@@ -154,6 +164,7 @@ const App = () => (
           Get My Cash Offer Now!
         </Button>
       </Box>
+    </Box>
     </Box>
   </ChakraProvider>
 )

@@ -23,7 +23,7 @@ import {
   Center
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
-
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa"
 const components = {
   Box,
   Image,
@@ -40,7 +40,11 @@ const components = {
   ListItem,
   IconButton,
   CopyIcon,
-  Center
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedin,
+  FaYoutube
 };
 
 export default function HomePage({ source }) {

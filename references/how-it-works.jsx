@@ -69,7 +69,9 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
   set number of slices to be given out. There wasn't less to be given to one person
   if you wanted to give more to another. That after a set amount was given out it
   would all disappear. She tried to explain this, but it fell on deaf ears.
-
+  primary_brightness: 132.536
+  secondary_brightness: 111.325
+  accent_brightness: 132.536
 
   <ChakraProvider resetCSS>
     <Box>
@@ -100,7 +102,9 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
             </Link>
           </List>
         </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" flexDirection='column'>
         <Heading
+        width="70%"
           textAlign="center"
           mt={20}
           color="whiteAlpha.900"
@@ -108,9 +112,10 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
         >
           {hero_header}
         </Heading>
-        <Text textAlign="center" mt={5} color="whiteAlpha.900">
+        <Text width="75%" textAlign="center" mt={5} color="whiteAlpha.900">
           {hero_content}
         </Text>
+        </Box>
         <Box display="flex" justifyContent="center" mt={20}>
           <IconButton
             aria-label="icon"
@@ -121,13 +126,15 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
         </Box>
       </Box>
     </Box>
-    <Heading textAlign="center" as="h2" mt={5}>
+    <Box display="flex" alignItems="center" justifyContent="center" flexDirection='column'>
+    <Heading textAlign="center" as="h2" mt={5} width="70%">
       {sell_your_house_in_three_easy_steps_header}
     </Heading>
-    <Text mt={5}>
+    <Text mt={5} width="75%">
       {' '}
       {sell_your_house_in_three_easy_steps_content}
     </Text>
+    </Box>
     <Box display="flex" m={5} justifyContent="space-between" p={20}>
       <Box display="flex" flexDirection="column" alignItems="center">
         <Heading as="h2" size="md">
@@ -163,11 +170,11 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
       ml={-3}
       mr={-3}
     >
-      <Box width="50%" mt={5} mb={5}>
-        <Heading ml={5}>
+      <Box width="50%" mt={5} mb={5}display="flex" alignItems="center" justifyContent="center" flexDirection='column'>>
+        <Heading ml={5} textAlign="center" width="70%">
           {form_section_header}
         </Heading>
-        <Text mt={5} ml={5}>
+        <Text mt={5} ml={5} width="75%">
           {form_section_content}
         </Text>
       </Box>
@@ -211,7 +218,7 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
     <Heading mt={10} textAlign="center">
       {explanation_of_the_process_header}
     </Heading>
-    <Box backgroundColor="blackAlpha.400" mt={5} p={14} ml={10} mr={10}>
+    <Box backgroundColor="blackAlpha.500" mt={5} p={14} ml={10} mr={10}>
       <Text
         color="whiteAlpha.900"
         fontWeight="bold"

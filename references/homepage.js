@@ -99,6 +99,9 @@ conclusion_content:
 primary_color: "#DD6B20"
 secondary_color: "#307DCF"
 accent_color: "#DD6B20"
+primary_brightness: 132.536
+secondary_brightness: 111.325
+accent_brightness: 132.536
 ---
 <div>
 <Box padding-right="15px" padding-left="15px" margin-right="auto" margin-left="auto"  width="90vw" position="relative" right="75vw" left="5vw"> 
@@ -515,6 +518,85 @@ accent_color: "#DD6B20"
       </Button>
     </Box>
   </Box>
+  <Box
+      backgroundColor={primary_color}
+      color={(primary_brightness > 180) ? "black" : "white"}
+      display="flex"
+      flexDirection="row"
+      justifyContent="space-around"
+      alignItems="space-around"
+      m={0}
+      p={0}
+      width="100vw"
+      position="relative" 
+      left="-14vw"
+      paddingTop="2rem"
+      baddingBottom="2rem"
+    >
+      <Box width="26%">
+        <Text fontSize="xl" marginLeft="1.5rem" paddingBottom="0.5">Find Us On</Text>
+        <Box
+        paddingTop="1.5rem"
+          display="flex"
+          alignItems="space-around"
+          justifyContent="space-around"
+        >
+        <FaFacebookF size="36"/>
+        <FaTwitter size="36"/>
+        <FaInstagram size="36"/>
+        <FaLinkedin size="36"/>
+        <FaYoutube size="36"/>
+        </Box>
+      </Box>
+      <Box width="26%">
+        <Box display="flex">
+          <Image height={10} width={10} />
+          <Text ml="1rem" fontSize="xl">
+            Contact
+          </Text>
+        </Box>
+        <Box display="flex">
+          <Box width={10} height={10} />
+          <Box width="80%" ml="1rem" marginBottom="2rem">
+            <Text>Text value</Text>
+            <Text>Text value</Text>
+            <Text>Text value</Text>
+            <Text>Text value</Text>
+            <Text>Text value</Text>
+          </Box>
+        </Box>
+      </Box>
+      <Box
+        width="26%"
+        ml={0}
+        mr={0}
+        display="flex"
+        flexDirection="column"
+        justifyContent="flex-start"
+        alignItems="center"
+      >
+        <Box ml={0} mr={0} pl={0} pr={0} width="110%" pt="0.5rem" pb="0.5rem">
+          <Text
+            fontSize="xl"
+            ml={0}
+            mr={0}
+            pr={0}
+            pl={0}
+            width="100%"
+            pb="0.5rem"
+            marginLeft="1.5rem"
+          >
+            SEO & Website Design Powered By:
+          </Text>
+        </Box>
+        <Box>
+          <Text width="80%" fontSize="lg">
+            Seo For Real Estate Investors LLC. Deeloped By Real Estate Investors
+            For Real Estate Investors
+          </Text>
+        </Box>
+      </Box>
+    </Box>
 </FormControl>
 </Box>
 </div>
