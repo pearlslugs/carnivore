@@ -27,11 +27,6 @@ fields:
   config:
     required: false
   label: Form Email
-- name: button_text
-  type: text
-  config:
-    required: false
-  label: Button Text
 - name: explain_the_process
   type: text
   config:
