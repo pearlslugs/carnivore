@@ -1,4 +1,44 @@
 ---
 label: Reusables
 hide_body: false
-fields: []
+fields:
+- name: button_text
+  type: text
+  config:
+    required: false
+  label: Button Text
+- name: hero_image
+  type: file
+  config:
+    maxSize: 64
+  label: Hero Image
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logo
+- name: facebook_link
+  type: text
+  config:
+    required: false
+  label: Facebook Link
+- name: twitter_link
+  type: text
+  config:
+    required: false
+  label: Twitter Link
+- name: linkedin_link
+  type: text
+  config:
+    required: false
+  label: LinkedIn Link
+- name: youtube_link
+  type: text
+  config:
+    required: false
+  label: YouTube Link
+- name: instagram_link
+  type: text
+  config:
+    required: false
+  label: Instagram Link
