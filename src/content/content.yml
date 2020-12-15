@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 Template_Number: 1
 main_site_heading: We Buy Houses In City, State
 main_site_subheading: We Buy Houses In Any Condition
@@ -97,6 +98,45 @@ conclusion_content:
   them to the next part of the process… the how it works page perhaps? Remember this
   is strategic. We don’t do random, and everything you do needs to have a solid reason
   or motive behind it!
+=======
+main_site_heading: ''
+main_site_subheading: ''
+property_address: ''
+form_phone_number: ''
+form_email: ''
+explain_the_process: ''
+explain_the_process_content: ''
+learn_how_it_works: ''
+learn_how_it_works_content: ''
+learn_about_us: ''
+learn_about_us_content: ''
+learn_how_to_sell_your_house: ''
+learn_how_to_sell_your_house_content: ''
+sell_your_house_the_easy_way_header: ''
+sell_your_house_the_easy_way_content: ''
+sell_your_house_the_easy_way_intro_content: ''
+list_section_header: ''
+list_section_content: ''
+left_side_of_list: []
+right_side_of_list: []
+any_condition_section: ''
+any_condition_content: ''
+any_situation_header: ''
+any_situation_content: ''
+people_love_us_header: ''
+featured_testimonial_1: ''
+featured_testimonial_1_name: ''
+featured_testimonial_2: ''
+featured_testimonial_2_name: ''
+featured_testimonial_3: ''
+featured_testimonial_3_name: ''
+benefit_you_offer_header: ''
+benefit_you_offer_content: ''
+benefits_list_left_side: []
+benefits_list_right_side: []
+conclusion_header: ''
+conclusion_content: ''
+>>>>>>> 158aaf8fbe6273c06b1b46530292deaddfa819d1
 learn_how_it_works_image: ''
 learn_about_us_image: ''
 learn_how_to_sell_your_house_image: ''
@@ -105,5 +145,8 @@ any_condition_section_background_image: ''
 testimonial_one_image: ''
 testimonial_two_image: ''
 testimonial_three_image: ''
+<<<<<<< HEAD
 ---
 
+=======
+>>>>>>> 158aaf8fbe6273c06b1b46530292deaddfa819d1
