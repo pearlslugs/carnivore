@@ -5,6 +5,8 @@ import services from "../src/communication/services";
 
 import matter from "gray-matter";
 
+import {Link as NextLink} from 'next/link'
+
 import {
   Box,
   Image,
@@ -43,7 +45,8 @@ const components = {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-  FaYoutube
+  FaYoutube,
+  NextLink
 };
 
 export default function HomePage({ source }) {
@@ -57,6 +60,8 @@ export async function getStaticProps() {
   const yaml = require('js-yaml')
 
   let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
+  let reusablesInfo = await yaml.safeLoad(fs.readFileSync('src/content/reusables.yml', 'utf8'));
+  let reusables = await fs.readFileSync("src/content/reusables.yml", "utf8");
   let yamlContent = await fs.readFileSync("src/content/content.yml", "utf8");
   let altText = await fs.readFileSync("src/content/alt-tags.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
@@ -66,9 +71,10 @@ export async function getStaticProps() {
   .then((data) => {
     return data;
   });
-  const filteredYamlContent = yamlContent.split("---").join(' ')
+  const filteredYamlContent = yamlContent.split("---",).join(' ')
   const filteredAltText = altText.split("---").join(' ')
   const filteredColors = colors.split("---").join(' ')
+  const filteredReusables = reusables.split("---").join(' ')
   function brightnessByColor (color) {
     var color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
     if (isHEX) {
@@ -86,7 +92,7 @@ export async function getStaticProps() {
   const accentBrightness = brightnessByColor(colorObject.accent_color)
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
-  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

@@ -102,6 +102,15 @@ accent_color: "#DD6B20"
 primary_brightness: 132.536
 secondary_brightness: 111.325
 accent_brightness: 132.536
+
+button_text: Get Your Free Offer
+hero_image: "/public/pexels-photo-1144687.jpeg"
+logo: "/public/frogman.png"
+facebook_link: ''
+twitter_link: twitter
+linkedin_link: ''
+youtube_link: youtube
+instagram_link: insta
 ---
 <div>
 <Box padding-right="15px" padding-left="15px" margin-right="auto" margin-left="auto"  width="90vw" position="relative" right="75vw" left="5vw"> 
@@ -493,7 +502,7 @@ accent_brightness: 132.536
   backgroundColor="#f5f5f5"
 >
   <FormErrorMessage>Error message</FormErrorMessage>
-  <Box p={10}>
+  <Box p={10} >
     <FormLabel>Property Address*</FormLabel>
     <Input backgroundColor="#ffffff" />
     <Box display="flex" justifyContent="space-between" p={0} m={0}>
@@ -518,6 +527,8 @@ accent_brightness: 132.536
       </Button>
     </Box>
   </Box>
+  </FormControl>
+  <Box height="3rem" width="100%" backgroundColor="white"></Box>
   <Box
       backgroundColor={primary_color}
       color={(primary_brightness > 180) ? "black" : "white"}
@@ -529,9 +540,10 @@ accent_brightness: 132.536
       p={0}
       width="100vw"
       position="relative" 
-      left="-14vw"
+      left="-5vw"
       paddingTop="2rem"
-      baddingBottom="2rem"
+      paddingBottom="2rem"
+      marginTop="2rem"
     >
       <Box width="26%">
         <Text fontSize="xl" marginLeft="1.5rem" paddingBottom="0.5">Find Us On</Text>
@@ -540,12 +552,14 @@ accent_brightness: 132.536
           display="flex"
           alignItems="space-around"
           justifyContent="space-around"
-        >
-        <FaFacebookF size="36"/>
-        <FaTwitter size="36"/>
-        <FaInstagram size="36"/>
-        <FaLinkedin size="36"/>
-        <FaYoutube size="36"/>
+          width="80%"
+        > 
+        {(facebook_link) ? <FaFacebookF size="36" /> : null}
+        {(twitter_link) ? <FaTwitter size="36" /> : null}
+        {(instagram_link) ? <FaInstagram size="36" /> : null}
+        {(linkedin_link) ? <FaLinkedin size="36" /> : null}
+        {(youtube_link) ? <FaYoutube size="36"/> : null}
+        
         </Box>
       </Box>
       <Box width="26%">
@@ -597,6 +611,5 @@ accent_brightness: 132.536
         </Box>
       </Box>
     </Box>
-</FormControl>
 </Box>
 </div>
