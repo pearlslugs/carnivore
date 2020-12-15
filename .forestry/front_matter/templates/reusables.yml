@@ -43,5 +43,4 @@ fields:
     required: false
   label: Instagram Link
 pages:
-- src/content/reusables-1.yml
 - src/content/reusables.yml
