@@ -104,8 +104,8 @@ secondary_brightness: 111.325
 accent_brightness: 132.536
 
 button_text: Get Your Free Offer
-hero_image: "/public/pexels-photo-1144687.jpeg"
-logo: "/public/frogman.png"
+hero_image: "url(/pexels-photo-1144687.jpeg)"
+logo: "/frogman.png"
 facebook_link: ''
 twitter_link: twitter
 linkedin_link: ''
@@ -116,11 +116,11 @@ instagram_link: insta
 <Box padding-right="15px" padding-left="15px" margin-right="auto" margin-left="auto"  width="90vw" position="relative" right="75vw" left="5vw"> 
 <Box
   width="99.86vw" position="relative" left="-5.1vw" padding="0" margin="0" 
-  bgImage='url("https://images.pexels.com/photos/1144687/pexels-photo-1144687.jpeg?cs'
+  bgImage={hero_background}
   m={-3}
 >
   <Box display="flex" justifyContent="space-between">
-    <Image height="100px" width="100px" ml={5} mt={5} />
+    <Image src={logo} height="100px" width="100px" ml={5} mt={5} />
     <List
       margin-left="-2em!important"
       display="flex"
