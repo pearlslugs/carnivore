@@ -66,6 +66,7 @@ export async function getStaticProps() {
   let altText = await fs.readFileSync("src/content/alt-tags.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
+  const anyConditionBackground = reusablesInfo.any_condition_section_background_image
   const heroBackground = reusablesInfo.hero_image
   const template = await services.getPage(personal.template, 'template')
   .then((data) => {
@@ -92,7 +93,7 @@ export async function getStaticProps() {
   const accentBrightness = brightnessByColor(colorObject.accent_color)
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
-  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\nhero_background: "url(${heroBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {
