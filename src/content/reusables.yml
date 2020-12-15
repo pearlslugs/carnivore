@@ -1,9 +1,9 @@
 ---
-button_text: ''
-hero_image: ''
-logo: ''
-facebook_link: ''
-twitter_link: ''
+button_text: Get Your Free Offer
+hero_image: "/public/pexels-photo-1144687.jpeg"
+logo: "/public/frogman.png"
+facebook_link: facebook
+twitter_link: twitter
 linkedin_link: ''
-youtube_link: ''
-instagram_link: ''
+youtube_link: youtube
+instagram_link: insta
