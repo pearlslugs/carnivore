@@ -61,12 +61,13 @@ export async function getStaticProps() {
 
   let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
   let reusablesInfo = await yaml.safeLoad(fs.readFileSync('src/content/reusables.yml', 'utf8'));
+  let homepageVariables = await yaml.safeLoad(fs.readFileSync('src/content/content.yml', 'utf8'));
   let reusables = await fs.readFileSync("src/content/reusables.yml", "utf8");
   let yamlContent = await fs.readFileSync("src/content/content.yml", "utf8");
   let altText = await fs.readFileSync("src/content/alt-tags.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
-  const anyConditionBackground = reusablesInfo.any_condition_section_background_image
+  const anyConditionBackground = homepageVariables.any_condition_section_background_image
   const heroBackground = reusablesInfo.hero_image
   const template = await services.getPage(personal.template, 'template')
   .then((data) => {

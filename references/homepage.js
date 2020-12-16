@@ -352,7 +352,7 @@ instagram_link: insta
   justifyContent="space-between"
   minWidth="300px"
   minHeight="600px"
-  bgImage='url("https://i1.wp.com/movingtips.wpengine.com/wp-content/uploads/2019/04/old-house.jpg?w'
+  bgImage={any_condition_background}
   bgSize="cover"
   bgRepeat="no-repeat"
   ml={-3}
