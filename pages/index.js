@@ -64,6 +64,7 @@ export async function getStaticProps() {
   let homepageVariables = await yaml.safeLoad(fs.readFileSync('src/content/content.yml', 'utf8'));
   let reusables = await fs.readFileSync("src/content/reusables.yml", "utf8");
   let yamlContent = await fs.readFileSync("src/content/content.yml", "utf8");
+  let personalYaml = await fs.readFileSync("src/content/Personal-Settings.yml", "utf8");
   let altText = await fs.readFileSync("src/content/alt-tags.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
@@ -77,6 +78,7 @@ export async function getStaticProps() {
   const filteredAltText = altText.split("---").join(' ')
   const filteredColors = colors.split("---").join(' ')
   const filteredReusables = reusables.split("---").join(' ')
+  const filteredPersonal = personalYaml.split("---").join(' ')
   function brightnessByColor (color) {
     var color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
     if (isHEX) {
@@ -94,7 +96,7 @@ export async function getStaticProps() {
   const accentBrightness = brightnessByColor(colorObject.accent_color)
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
-  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

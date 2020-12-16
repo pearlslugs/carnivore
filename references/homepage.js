@@ -120,7 +120,9 @@ instagram_link: insta
   m={-3}
 >
   <Box display="flex" justifyContent="space-between">
+    <Box padding="1.5rem" margin="1.5rem">
     <Image src={logo} height={100} width={100} />
+    </Box>
     <List
       margin-left="-2em!important"
       display="flex"
