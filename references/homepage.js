@@ -120,7 +120,7 @@ instagram_link: insta
   m={-3}
 >
   <Box display="flex" justifyContent="space-between">
-    <Image src={logo} height="100px" width="100px" ml={5} mt={5} />
+    <Image src={logo} height={100} width={100} />
     <List
       margin-left="-2em!important"
       display="flex"
@@ -218,7 +218,7 @@ instagram_link: insta
     <Heading size="lg" as="h3" textAlign="center">
     {learn_how_it_works}
     </Heading>
-    <Image height="100px" width="100px" mt={5} />
+    <Image src={learn_how_it_works_image} height="225" width="225" mt={5} />
     <Text mt={5}>
     {learn_how_it_works_content}
     </Text>
@@ -233,7 +233,7 @@ instagram_link: insta
     <Heading size="lg" as="h3" textAlign="center">
     {learn_about_us}
     </Heading>
-    <Image height="100px" width="100px" mt={5} />
+    <Image src={learn_about_us_image} height="225" width="225" mt={5} />
     <Text mt={5}>
     {learn_about_us_content}
     </Text>
@@ -248,7 +248,7 @@ instagram_link: insta
     <Heading size="lg" as="h3" textAlign="center">
     {learn_how_to_sell_your_house}
     </Heading>
-    <Image height="100px" width="100px" mt={5} />
+    <Image src={learn_how_to_sell_your_house_image} height="225" width="225" mt={5} />
     <Text mt={5}>
     {learn_how_to_sell_your_house_content}
     </Text>
@@ -263,7 +263,7 @@ instagram_link: insta
     ml={-3}
     mr={-3}
   >
-    <Image height="100px" width="100px" m={5} />
+    <Image src="/gear.png" height="100px" width="100px" m={5} />
     <Box width="60%" mb={5} mt={5} mr={5}>
       <Heading as="h2">{sell_your_house_the_easy_way_header}</Heading>
       <Text mt={5}>
@@ -398,7 +398,7 @@ instagram_link: insta
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image height="100px" width="100px" mt={5} />
+      <Image src="/gear.png" height="100px" width="100px" mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_1}
       </Text>
@@ -418,7 +418,7 @@ instagram_link: insta
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image height="100px" width="100px" mt={5} />
+      <Image src="/gear.png" height="100px" width="100px" mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_2}
       </Text>
@@ -438,7 +438,7 @@ instagram_link: insta
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image height="100px" width="100px" mt={5} />
+      <Image src="/gear.png" height="100px" width="100px" mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_3}
       </Text>
@@ -564,7 +564,6 @@ instagram_link: insta
       </Box>
       <Box width="26%">
         <Box display="flex">
-          <Image height={10} width={10} />
           <Text ml="1rem" fontSize="xl">
             Contact
           </Text>

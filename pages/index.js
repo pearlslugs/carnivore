@@ -6,10 +6,10 @@ import services from "../src/communication/services";
 import matter from "gray-matter";
 
 import {Link as NextLink} from 'next/link'
+import Image from 'next/image'
 
 import {
   Box,
-  Image,
   List,
   Link,
   Heading,
@@ -46,7 +46,7 @@ const components = {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
-  NextLink
+  NextLink,
 };
 
 export default function HomePage({ source }) {
