@@ -51,7 +51,6 @@ const components = {
 
 export default function HomePage({ source }) {
   const content = hydrate(source, { components });
-
   return <div className="wrapper">{content}</div>;
 }
 
@@ -70,6 +69,8 @@ export async function getStaticProps() {
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
   const anyConditionBackground = homepageVariables.any_condition_section_background_image
   const heroBackground = reusablesInfo.hero_image
+  const phoneNumber = personal.phone_number
+  
   const template = await services.getPage(personal.template, 'template')
   .then((data) => {
     return data;
@@ -96,7 +97,7 @@ export async function getStaticProps() {
   const accentBrightness = brightnessByColor(colorObject.accent_color)
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
-  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

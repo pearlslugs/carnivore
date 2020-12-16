@@ -111,6 +111,12 @@ twitter_link: twitter
 linkedin_link: ''
 youtube_link: youtube
 instagram_link: insta
+
+template: Journey
+name: ''
+email: email@email.com
+address: 123 fake street
+phone_number: 555-123-1234
 ---
 <div>
 <Box padding-right="15px" padding-left="15px" margin-right="auto" margin-left="auto"  width="90vw" position="relative" right="75vw" left="5vw"> 
@@ -265,7 +271,7 @@ instagram_link: insta
     ml={-3}
     mr={-3}
   >
-    <Image src="/gear.png" height="100px" width="100px" m={5} />
+    <Image src="/gear.png" height={300} width={600} m={5} />
     <Box width="60%" mb={5} mt={5} mr={5}>
       <Heading as="h2">{sell_your_house_the_easy_way_header}</Heading>
       <Text mt={5}>
@@ -548,7 +554,7 @@ instagram_link: insta
       marginTop="2rem"
     >
       <Box width="26%">
-        <Text fontSize="xl" marginLeft="1.5rem" paddingBottom="0.5">Find Us On</Text>
+        <Text fontSize="xl" marginLeft="1rem" paddingBottom="0.5">Find Us On</Text>
         <Box
         paddingTop="1.5rem"
           display="flex"
@@ -566,18 +572,16 @@ instagram_link: insta
       </Box>
       <Box width="26%">
         <Box display="flex">
-          <Text ml="1rem" fontSize="xl">
+          <Text ml="1.5rem" fontSize="xl" pb="0.5rem" position="relative" left="1.1rem">
             Contact
           </Text>
         </Box>
         <Box display="flex">
           <Box width={10} height={10} />
-          <Box width="80%" ml="1rem" marginBottom="2rem">
-            <Text>Text value</Text>
-            <Text>Text value</Text>
-            <Text>Text value</Text>
-            <Text>Text value</Text>
-            <Text>Text value</Text>
+          <Box width="80%" ml="1.5rem" marginBottom="2rem">
+            <Text><a href={clickable_number}>{phone_number}</a></Text>
+            <Text>{address}</Text>
+            <Text>{email}</Text>
           </Box>
         </Box>
       </Box>
@@ -590,7 +594,7 @@ instagram_link: insta
         justifyContent="flex-start"
         alignItems="center"
       >
-        <Box ml={0} mr={0} pl={0} pr={0} width="110%" pt="0.5rem" pb="0.5rem">
+        <Box ml={0} mr={0} pl={0} pr={0} width="110%" pb="0.5rem">
           <Text
             fontSize="xl"
             ml={0}
@@ -598,8 +602,7 @@ instagram_link: insta
             pr={0}
             pl={0}
             width="100%"
-            pb="0.5rem"
-            marginLeft="1.5rem"
+          
           >
             SEO & Website Design Powered By:
           </Text>
