@@ -1,101 +1,98 @@
 Template_Number: 1
 main_site_heading: We Buy Houses In City, State
 main_site_subheading: We Buy Houses In Any Condition
-Sell_Your_House_In_Area:
-  Sell Your House In City State And Pay No Agent Fees (Etc.
+Sell_Your_House_In_Area: Sell Your House In City State And Pay No Agent Fees (Etc.
   etc). Find Out How
-property_address:
-form_phone_number:
-form_email:
-button_text: Get My Cash Offer Now!
+property_address: ''
+form_phone_number: ''
+form_email: ''
 explain_the_process: How To Sell Your House
-explain_the_process_content:
-  Selling your Connecticut house for cash is honestly quite
+explain_the_process_content: Selling your Connecticut house for cash is honestly quite
   easy. This is because we eliminate the “middle man” (agents or banks). We do not
   depend on approvals or inspections from third parties in order to buy your house.
   Remember, NEVER “low-ball” offers
 learn_how_it_works: Learn How It Works
-learn_how_it_works_content:
-  We know you are not going to pick just anyone to work
+learn_how_it_works_content: We know you are not going to pick just anyone to work
   with. So, get to know us a bit!
 learn_about_us: Meet The Company
-learn_about_us_content:
-  We know you are not going to pick just anyone to work with.
+learn_about_us_content: We know you are not going to pick just anyone to work with.
   So, get to know us a bit!
 learn_how_to_sell_your_house: Get Your Cash Offer
-learn_how_to_sell_your_house_content:
-  We will not waste your time. Fill in any of
+learn_how_to_sell_your_house_content: We will not waste your time. Fill in any of
   our forms and receive your offer.
 sell_your_house_the_easy_way_header: Sell Your House The Easy Way.
-sell_your_house_the_easy_way_content:
-  Selling a house can be stressful. It is not
+sell_your_house_the_easy_way_content: Selling a house can be stressful. It is not
   just the process of selling, dealing with agents, walkthroughs, open houses, repairs,
   cleaning, and uncertainties, but also the reasons for selling, add to the already
   difficult process.
-sell_your_house_the_easy_way_intro_content:
-  We are Jess and Jerryll, and together
+sell_your_house_the_easy_way_intro_content: We are Jess and Jerryll, and together
   with our team, we will do our best to bring you an offer that works! Just fill in
   the form below to get your offer started. Remember, it’s 100% FREE and never any
   obligation to accept.
 list_section_header: No Matter What Issues You May Be having We Can Help You
-list_section_content:
-  We buy houses, condos and apartments all over Connecticut no
+list_section_content: We buy houses, condos and apartments all over Connecticut no
   matter what your reasons for selling are
 left_side_of_list:
-  - Avoiding Foreclosure
-  - Mold, Water, Fire Damage
-  - Elderly In Need Of Assisted Living
+- Avoiding Foreclosure
+- Mold, Water, Fire Damage
+- Elderly In Need Of Assisted Living
 right_side_of_list:
-  - Extensive Repairs Needed
-  - Sell Old House To Buy A New Place
-  - Sell Your House Without Listing It
+- Extensive Repairs Needed
+- Sell Old House To Buy A New Place
+- Sell Your House Without Listing It
 any_condition_section: Any Condition
-any_condition_content:
-  We Buy Houses In Cash, no matter how many repairs it needs.
+any_condition_content: We Buy Houses In Cash, no matter how many repairs it needs.
   Remember, we are flippers. The worse the condition, the more excited we get!
 any_situation_header: Any Situation
-any_situation_content:
-  We Buy Houses In Cash, no matter how many repairs it needs.
+any_condition_background_image: ''
+any_situation_content: We Buy Houses In Cash, no matter how many repairs it needs.
   Remember, we are flippers. The worse the condition, the more excited we get!
 people_love_us_header: People Love Us and So Will You!
-featured_testimonial_1: “My aunt needed money for medical expenses and the house
+featured_testimonial_1: "“My aunt needed money for medical expenses and the house
   was an absolute wreck! They came along, and house was sold. Got the money I needed.
-  Everytime I think about it I want to hug you!“
+  Everytime I think about it I want to hug you!“"
 featured_testimonial_1_name: Justin [San Diego, CA]
-featured_testimonial_2: “My aunt needed money for medical expenses and the house
+featured_testimonial_2: "“My aunt needed money for medical expenses and the house
   was an absolute wreck! They came along, and house was sold. Got the money I needed.
-  Everytime I think about it I want to hug you!“
+  Everytime I think about it I want to hug you!“"
 featured_testimonial_2_name: Justin [San Diego, CA]
-featured_testimonial_3: “My aunt needed money for medical expenses and the house
+featured_testimonial_3: "“My aunt needed money for medical expenses and the house
   was an absolute wreck! They came along, and house was sold. Got the money I needed.
-  Everytime I think about it I want to hug you!“
+  Everytime I think about it I want to hug you!“"
 featured_testimonial_3_name: Justin [San Diego, CA]
 benefit_you_offer_header: Your Unique Value Proposition
 benefits_you_offer_text:
-  - 1
-  - 2
-  - 3
-benefit_you_offer_content:
-  What makes you better than the rest. (Remember never talk
-  bad about the competition. It is petty.). Never say you are the best, Number 1, Premier,
-  leading buyers. If you are, there is no need to announce it.
+- 1
+- 2
+- 3
+benefit_you_offer_content: What makes you better than the rest. (Remember never talk
+  bad about the competition. It is petty.). Never say you are the best, Number 1,
+  Premier, leading buyers. If you are, there is no need to announce it.
 benefits_list_left_side:
-  - 1
-  - 2
-  - 3
+- 1
+- 2
+- 3
 benefits_list_right_side:
-  - 1
-  - 2
-  - 3
+- 1
+- 2
+- 3
 conclusion_header: ADD A GOOD CONCLUSION/RECAP TITLE
-conclusion_content:
-  Here we write a conclusion. Never just end the page randomly.
+conclusion_content: Here we write a conclusion. Never just end the page randomly.
   Ideally end with a call to action. Tell your traffic what they need to do next.
   Let there be continuation to their browsing session. Be sure you do this in the
   form of a closing statement. Recap what you do why you are a good choice and direct
   them to the next part of the process… the how it works page perhaps? Remember this
   is strategic. We don’t do random, and everything you do needs to have a solid reason
   or motive behind it!
+learn_how_it_works_image: "/gear.png"
+learn_about_us_image: "/peopleincircle_burned.png"
+learn_how_to_sell_your_house_image: "/house-1.png"
+sell_your_house_the_easy_way_image: ''
+any_condition_section_background_image: "/old-house.jpg"
+testimonial_one_image: ''
+testimonial_two_image: ''
+testimonial_three_image: ''
+
 primary_color: "#DD6B20"
 secondary_color: "#307DCF"
 accent_color: "#DD6B20"
@@ -139,18 +136,10 @@ phone_number: 555-123-1234
       padding="0!important"
       margin-right="0!important"
     >
-      <Link color="whiteAlpha.900">How It Works</Link>
-      <Link color="whiteAlpha.900">Reviews</Link>
-      <Link color="whiteAlpha.900">Our Company</Link>
-      <Link color="whiteAlpha.900">About Us</Link>
-      <Link
-        backgroundColor={primary_color}
-        color="whiteAlpha.900"
-        p={3}
-        borderRadius="5px"
-      >
-        Sell Your House
-      </Link>
+      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer"}} color="white" id="top-link">How It Works</Box></a></Link>
+      <Link href="/reviews" ><a><Box _hover={{cursor: "pointer"}} color="white" id="top-link">Reviews</Box></a></Link>
+      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer"}} color="white" id="top-link">About Us</Box></a></Link>
+      <Link href="/sell-your-house"><a><Box _hover={{cursor: "pointer"}} p={3} borderRadius="5px" backgroundColor={primary_color} color="white" id="top-link">Sell Your House</Box></a></Link>
     </List>
   </Box>
   <Heading textAlign="center" mt={20} color="whiteAlpha.900">
@@ -406,7 +395,7 @@ phone_number: 555-123-1234
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image src="/gear.png" height="100px" width="100px" mt={5} />
+      <Image src={testimonial_one_image} height="100px" width="100px" mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_1}
       </Text>
@@ -426,7 +415,7 @@ phone_number: 555-123-1234
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image src="/gear.png" height="100px" width="100px" mt={5} />
+      <Image src={testimonial_two_image} height="100px" width="100px" mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_2}
       </Text>
@@ -446,7 +435,7 @@ phone_number: 555-123-1234
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image src="/gear.png" height="100px" width="100px" mt={5} />
+      <Image src={testimonial_three_image} height="100px" width="100px" mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_3}
       </Text>
@@ -621,11 +610,11 @@ phone_number: 555-123-1234
           justifyContent="center"
           width="80%"
         > 
-        {(facebook_link) ? <FaFacebookF size="24" /> : null}
-        {(twitter_link) ? <FaTwitter size="24" /> : null}
-        {(instagram_link) ? <FaInstagram size="24" /> : null}
-        {(linkedin_link) ? <FaLinkedin size="24" /> : null}
-        {(youtube_link) ? <FaYoutube size="24"/> : null}
+        {(facebook_link) ? <Box padding="1em"><FaFacebookF padding="1em" size="24" /></Box> : null}
+        {(twitter_link) ? <Box padding="1em"><FaTwitter padding="1em" size="24" /></Box> : null}
+        {(instagram_link) ? <Box padding="1em"><FaInstagram padding="1em" size="24" /></Box> : null}
+        {(linkedin_link) ? <Box padding="1em"><FaLinkedin padding="1em" size="24" /></Box> : null}
+        {(youtube_link) ? <Box padding="1em"><FaYoutube padding="1em" size="24"/></Box> : null}
         
         </Box>
         </Box>
