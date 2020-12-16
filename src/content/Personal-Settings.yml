@@ -1,6 +1,6 @@
 ---
 template: Journey
 name: ''
-email: ''
-address: ''
-phone_number: ''
+email: email@email.com
+address: 123 fake street
+phone_number: 555-123-1234
