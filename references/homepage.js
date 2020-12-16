@@ -538,8 +538,8 @@ phone_number: 555-123-1234
   </FormControl>
   <Box height="3rem" width="100%" backgroundColor="white"></Box>
   <Box
-      backgroundColor={primary_color}
-      color={(primary_brightness > 180) ? "black" : "white"}
+      backgroundColor="#696969"
+      color="white"
       display="flex"
       flexDirection="row"
       justifyContent="space-around"
@@ -553,23 +553,6 @@ phone_number: 555-123-1234
       paddingBottom="2rem"
       marginTop="2rem"
     >
-      <Box width="26%">
-        <Text fontSize="xl" marginLeft="1rem" paddingBottom="0.5">Find Us On</Text>
-        <Box
-        paddingTop="1.5rem"
-          display="flex"
-          alignItems="space-around"
-          justifyContent="space-around"
-          width="80%"
-        > 
-        {(facebook_link) ? <FaFacebookF size="36" /> : null}
-        {(twitter_link) ? <FaTwitter size="36" /> : null}
-        {(instagram_link) ? <FaInstagram size="36" /> : null}
-        {(linkedin_link) ? <FaLinkedin size="36" /> : null}
-        {(youtube_link) ? <FaYoutube size="36"/> : null}
-        
-        </Box>
-      </Box>
       <Box width="26%">
         <Box display="flex">
           <Text ml="1.5rem" fontSize="xl" pb="0.5rem" position="relative" left="1.1rem">
@@ -612,8 +595,39 @@ phone_number: 555-123-1234
             Seo For Real Estate Investors LLC. Deeloped By Real Estate Investors
             For Real Estate Investors
           </Text>
+          <Image src="/seoforrei.png" width={300} height={220} />
         </Box>
       </Box>
     </Box>
+    <Box
+      backgroundColor="#585858"
+      color="white"
+      display="flex"
+      flexDirection="row"
+      justifyContent="center"
+      alignItems="center"
+      m={0}
+      p={0}
+      width="100vw"
+      position="relative" 
+      left="-5vw"
+      paddingTop="1rem"
+      paddingBottom="2rem"
+    >
+    <Box
+        paddingTop="1.5rem"
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          width="80%"
+        > 
+        {(facebook_link) ? <FaFacebookF size="24" /> : null}
+        {(twitter_link) ? <FaTwitter size="24" /> : null}
+        {(instagram_link) ? <FaInstagram size="24" /> : null}
+        {(linkedin_link) ? <FaLinkedin size="24" /> : null}
+        {(youtube_link) ? <FaYoutube size="24"/> : null}
+        
+        </Box>
+        </Box>
 </Box>
 </div>
