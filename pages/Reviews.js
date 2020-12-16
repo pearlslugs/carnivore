@@ -45,7 +45,8 @@ const components = {
   FaTwitter,
   FaInstagram,
   FaLinkedin,
-  FaYoutube
+  FaYoutube,
+  Center
 };
 
 export default function HomePage({ source }) {
