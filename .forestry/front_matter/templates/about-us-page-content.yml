@@ -12,6 +12,11 @@ fields:
   config:
     required: false
   label: Hero Content
+- name: image_of_you
+  type: file
+  config:
+    maxSize: 64
+  label: Image Of You
 - name: introduce_company_header
   type: text
   config:
