@@ -84,7 +84,7 @@ accent_brightness: 132.536
 </Heading>
 <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" paddingTop="1rem">
    <Box width="50%" flexDirection="row" justifyContent="center" alignItems="center">
-      <Image padding="auto" margin="auto" height="100px" width="100px" mt={5} justifySelf="center" />
+      <Image src={logo} padding="auto" margin="auto" height="100px" width="100px" mt={5} justifySelf="center" />
    </Box>
    <Text width="38%" mt={5} ml={5} mr={5}>
       {introduce_company_content}
@@ -242,43 +242,11 @@ accent_brightness: 132.536
          justifyContent="center"
          width="80%"
          >
-         {(facebook_link) ? 
-         <Link href={facebook_link}>
-         <a>
-            <Box _hover={{cursor: "pointer"}} padding="1em">
-            <FaFacebookF padding="1em" size="24" />
-      </Box>
-      </a></Link> : null}
-      {(twitter_link) ? 
-      <Link href={facebook_link}>
-      <a>
-         <Box _hover={{cursor: "pointer"}} padding="1em">
-         <FaTwitter padding="1em" size="24" />
-   </Box>
-   </a></Link> : null}
-   {(instagram_link) ? 
-   <Link href={facebook_link}>
-   <a>
-      <Box _hover={{cursor: "pointer"}} padding="1em">
-      <FaInstagram padding="1em" size="24" />
-</Box>
-</a></Link> : null}
-{(linkedin_link) ? 
-<Link href={facebook_link}>
-<a>
-   <Box _hover={{cursor: "pointer"}} padding="1em">
-   <FaLinkedin padding="1em" size="24" />
-   </Box>
-</a>
-</Link> : null}
-{(youtube_link) ?
-<Link href={facebook_link}>
-<a>
-   <Box _hover={{cursor: "pointer"}} padding="1em">
-   <FaYoutube padding="1em" size="24"/>
-   </Box>
-</a>
-</Link> : null}
+        {(facebook_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaFacebookF padding="1em" size="24" /></Box></a></Link> : null}
+        {(twitter_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaTwitter padding="1em" size="24" /></Box></a></Link> : null}
+        {(instagram_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaInstagram padding="1em" size="24" /></Box></a></Link> : null}
+        {(linkedin_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaLinkedin padding="1em" size="24" /></Box></a></Link> : null}
+        {(youtube_link) ?<Link href={facebook_link}><a> <Box _hover={{cursor: "pointer"}} padding="1em"><FaYoutube padding="1em" size="24"/></Box></a></Link> : null}
 </Box>
 </Box>
 </Box>
