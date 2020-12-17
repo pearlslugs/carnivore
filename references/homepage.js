@@ -134,7 +134,7 @@ phone_number: 555-123-1234
       padding="0!important"
       margin-right="0!important"
     >
-              <Link href="/rev/how-it-worksiews" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
+              <Link href="/how-it-works" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
               <Link href="/reviews" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">Reviews</Box></a></Link>
               <Link href="/about-us"><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">About Us</Box></a></Link>
               <Link href="/sell-your-house"><a><Box fontSize="xl" borderRadius="5px" backgroundColor={primary_color} color="white" _hover={{cursor: "pointer", backgroundColor: darkened_primary}} p={3} >Sell Your House</Box></a></Link>

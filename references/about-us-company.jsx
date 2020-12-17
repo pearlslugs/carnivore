@@ -35,14 +35,14 @@ primary_brightness: 132.536
 secondary_brightness: 111.325
 accent_brightness: 132.536
 
-
+<Box>
 <Box>
    <Box
       bgImage={hero_background}
       m={-3}
       >
       <Box display="flex" justifyContent="space-between">
-         <Image src={logo} height="100px" width="100px" ml={5} mt={5} />
+      <Link href="/"><a><Box _hover={{cursor: "pointer"}} margin="1.5rem" padding="1.5rem"><Image src={logo} height="100px" width="100px" ml={5} mt={5} /></Box></a></Link>
          <List
             display="flex"
             mr={5}
@@ -50,7 +50,7 @@ accent_brightness: 132.536
             justifyContent="space-between"
             alignItems="center"
             >
-              <Link href="/rev/how-it-worksiews" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
+              <Link href="/how-it-works" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
               <Link href="/reviews" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">Reviews</Box></a></Link>
               <Text fontSize="xl" color="white" >About Us</Text>
               <Link href="/sell-your-house"><a><Box fontSize="xl" borderRadius="5px" backgroundColor={primary_color} color="white" _hover={{cursor: "pointer", backgroundColor: darkened_primary}} p={3} >Sell Your House</Box></a></Link>
@@ -84,7 +84,7 @@ accent_brightness: 132.536
 </Heading>
 <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" paddingTop="1rem">
    <Box width="50%" flexDirection="row" justifyContent="center" alignItems="center">
-      <Image src={logo} padding="auto" margin="auto" height="100px" width="100px" mt={5} justifySelf="center" />
+      <Image src={image_of_you} padding="auto" margin="auto" height={300} width={300} mt={5} justifySelf="center" />
    </Box>
    <Text width="38%" mt={5} ml={5} mr={5}>
       {introduce_company_content}
@@ -159,7 +159,8 @@ accent_brightness: 132.536
          </Button>
       </Box>
    </Box>
-   <Box
+</Box>
+<Box
       backgroundColor="#696969"
       color="white"
       display="flex"
@@ -170,7 +171,6 @@ accent_brightness: 132.536
       p={0}
       width="100vw"
       position="relative" 
-      left="-5vw"
       paddingTop="2rem"
       paddingBottom="2rem"
       marginTop="2rem"
@@ -231,7 +231,6 @@ accent_brightness: 132.536
       p={0}
       width="100vw"
       position="relative" 
-      left="-5vw"
       paddingTop="1rem"
       paddingBottom="2rem"
       >

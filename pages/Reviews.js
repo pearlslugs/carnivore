@@ -4,12 +4,12 @@ import hydrate from "next-mdx-remote/hydrate";
 import services from "../src/communication/services";
 
 import matter from "gray-matter";
+import Link from 'next/link'
+import Image from 'next/image'
 
 import {
   Box,
-  Image,
   List,
-  Link,
   Heading,
   Text,
   FormControl,
@@ -23,7 +23,6 @@ import {
   Center
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
-
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa"
 const components = {
   Box,
@@ -46,7 +45,7 @@ const components = {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
-  Center
+  Center,
 };
 
 export default function HomePage({ source }) {
@@ -61,6 +60,7 @@ export async function getStaticProps() {
 
   let personal = await yaml.safeLoad(fs.readFileSync('src/content/Personal-Settings.yml', 'utf8'));
   let yamlContent = await fs.readFileSync("src/content/reviews_page_content.yml", "utf8");
+  let reusablesInfo = await yaml.safeLoad(fs.readFileSync('src/content/reusables.yml', 'utf8'));
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
   let reusables = await fs.readFileSync("src/content/reusables.yml", "utf8");
@@ -75,6 +75,8 @@ export async function getStaticProps() {
   });
   const filteredYamlContent = yamlContent.split("---").join(' ')
   const filteredColors = colors.split("---").join(' ')
+  const filteredReusables = reusables.split("---").join(' ')
+  const filteredPersonal = personalYaml.split("---").join(' ')
   function brightnessByColor (color) {
     var color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
     if (isHEX) {
@@ -92,8 +94,46 @@ export async function getStaticProps() {
   const accentBrightness = brightnessByColor(colorObject.accent_color)
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
+
+  function LightenDarkenColor(colorCode, amount) {
+    var usePound = false;
  
-  const source = `---\n${filteredColors}\n${filteredYamlContent}\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+    if (colorCode[0] == "#") {
+        colorCode = colorCode.slice(1);
+        usePound = true;
+    }
+ 
+    var num = parseInt(colorCode, 16);
+ 
+    var r = (num >> 16) + amount;
+ 
+    if (r > 255) {
+        r = 255;
+    } else if (r < 0) {
+        r = 0;
+    }
+ 
+    var b = ((num >> 8) & 0x00FF) + amount;
+ 
+    if (b > 255) {
+        b = 255;
+    } else if (b < 0) {
+        b = 0;
+    }
+ 
+    var g = (num & 0x0000FF) + amount;
+ 
+    if (g > 255) {
+        g = 255;
+    } else if (g < 0) {
+        g = 0;
+    }
+ 
+    return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+}
+  const darkenedPrimary = LightenDarkenColor(colorObject.primary_color, -30)
+ 
+  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n---\n ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

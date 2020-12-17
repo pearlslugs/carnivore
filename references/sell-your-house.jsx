@@ -68,9 +68,7 @@ clickable_number: "tel:555-123-1234"
       m={-3}
       >
       <Box display="flex" justifyContent="space-between">
-        <Box margin="1.5rem" padding="1.5rem">
-         <Image src={logo} height="100px" width="100px" ml={5} mt={5} />
-         </Box>
+      <Link href="/"><a><Box _hover={{cursor: "pointer"}} margin="1.5rem" padding="1.5rem"><Image src={logo} height="100px" width="100px" ml={5} mt={5} /></Box></a></Link>
          <List
             display="flex"
             mr={5}
