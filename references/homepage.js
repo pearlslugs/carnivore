@@ -123,9 +123,7 @@ phone_number: 555-123-1234
   m={-3}
 >
   <Box display="flex" justifyContent="space-between">
-    <Box padding="1.5rem" margin="1.5rem">
-    <Image src={logo} height={100} width={100} />
-    </Box>
+  <Link href="/"><a><Box _hover={{cursor: "pointer"}} margin="1.5rem" padding="1.5rem"><Image src={logo} height="100px" width="100px" ml={5} mt={5} /></Box></a></Link>
     <List
       margin-left="-2em!important"
       display="flex"
@@ -136,10 +134,10 @@ phone_number: 555-123-1234
       padding="0!important"
       margin-right="0!important"
     >
-      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
-      <Link href="/reviews" ><a><Box _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">Reviews</Box></a></Link>
-      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">About Us</Box></a></Link>
-      <Link href="/sell-your-house"><a><Box borderRadius="5px" backgroundColor={primary_color} color="white" _hover={{cursor: "pointer", backgroundColor: darkened_primary}} p={3} >Sell Your House</Box></a></Link>
+              <Link href="/rev/how-it-worksiews" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
+              <Link href="/reviews" ><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">Reviews</Box></a></Link>
+              <Link href="/about-us"><a><Box fontSize="xl" _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">About Us</Box></a></Link>
+              <Link href="/sell-your-house"><a><Box fontSize="xl" borderRadius="5px" backgroundColor={primary_color} color="white" _hover={{cursor: "pointer", backgroundColor: darkened_primary}} p={3} >Sell Your House</Box></a></Link>
     </List>
   </Box>
   <Heading textAlign="center" mt={20} color="whiteAlpha.900">
@@ -435,7 +433,7 @@ phone_number: 555-123-1234
       justifyContent="flex-start"
       alignItems="center"
     >
-      <Image src={testimonial_three_image} height="100px" width="100px" mt={5} />
+      <Image src={testimonial_three_image} height="100px" width="100px"mt={5} />
       <Text mt={5} fontWeight="bold" fontStyle="italic">
       {featured_testimonial_3}
       </Text>
@@ -610,11 +608,11 @@ phone_number: 555-123-1234
           justifyContent="center"
           width="80%"
         > 
-        {(facebook_link) ? <Box padding="1em"><FaFacebookF padding="1em" size="24" /></Box> : null}
-        {(twitter_link) ? <Box padding="1em"><FaTwitter padding="1em" size="24" /></Box> : null}
-        {(instagram_link) ? <Box padding="1em"><FaInstagram padding="1em" size="24" /></Box> : null}
-        {(linkedin_link) ? <Box padding="1em"><FaLinkedin padding="1em" size="24" /></Box> : null}
-        {(youtube_link) ? <Box padding="1em"><FaYoutube padding="1em" size="24"/></Box> : null}
+        {(facebook_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaFacebookF padding="1em" size="24" /></Box></a></Link> : null}
+        {(twitter_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaTwitter padding="1em" size="24" /></Box></a></Link> : null}
+        {(instagram_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaInstagram padding="1em" size="24" /></Box></a></Link> : null}
+        {(linkedin_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaLinkedin padding="1em" size="24" /></Box></a></Link> : null}
+        {(youtube_link) ?<Link href={facebook_link}><a> <Box _hover={{cursor: "pointer"}} padding="1em"><FaYoutube padding="1em" size="24"/></Box></a></Link> : null}
         
     </Box>
     </Box>

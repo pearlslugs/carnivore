@@ -311,30 +311,10 @@ clickable_number: "tel:555-123-1234"
             justifyContent="center"
             width="80%"
             >
-            {(facebook_link) ? 
-            <Box padding="1em">
-               <FaFacebookF padding="1em" size="24" />
-            </Box>
-            : null}
-            {(twitter_link) ? 
-            <Box padding="1em">
-               <FaTwitter padding="1em" size="24" />
-            </Box>
-            : null}
-            {(instagram_link) ? 
-            <Box padding="1em">
-               <FaInstagram padding="1em" size="24" />
-            </Box>
-            : null}
-            {(linkedin_link) ? 
-            <Box padding="1em">
-               <FaLinkedin padding="1em" size="24" />
-            </Box>
-            : null}
-            {(youtube_link) ? 
-            <Box padding="1em">
-               <FaYoutube padding="1em" size="24"/>
-            </Box>
-            : null}
+        {(facebook_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaFacebookF padding="1em" size="24" /></Box></a></Link> : null}
+        {(twitter_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaTwitter padding="1em" size="24" /></Box></a></Link> : null}
+        {(instagram_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaInstagram padding="1em" size="24" /></Box></a></Link> : null}
+        {(linkedin_link) ? <Link href={facebook_link}><a><Box _hover={{cursor: "pointer"}} padding="1em"><FaLinkedin padding="1em" size="24" /></Box></a></Link> : null}
+        {(youtube_link) ?<Link href={facebook_link}><a> <Box _hover={{cursor: "pointer"}} padding="1em"><FaYoutube padding="1em" size="24"/></Box></a></Link> : null}
          </Box>
       </Box>

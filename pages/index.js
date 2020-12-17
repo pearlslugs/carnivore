@@ -130,9 +130,8 @@ export async function getStaticProps() {
     return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
 }
   const darkenedPrimary = LightenDarkenColor(colorObject.primary_color, -30)
-  console.log(darkenedPrimary, "dark")
-
-  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n--- ${template}`;
+ 
+  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n---\n ${template}`;
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {
     components,

@@ -35,6 +35,6 @@ ul.css-s9av07 {
   align-items: center;
   padding: 0!important;
 }
-#pointer:hover {
-  cursor: pointer;
+.rounded-image img{
+  border-radius: 50%;
 }
