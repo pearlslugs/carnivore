@@ -115,7 +115,7 @@ email: email@email.com
 address: 123 fake street
 phone_number: 555-123-1234
 ---
-<div>
+<Box overflowX="hidden">
 <Box padding-right="15px" padding-left="15px" margin-right="auto" margin-left="auto"  width="90vw" position="relative" right="75vw" left="5vw"> 
 <Box
   width="99.86vw" position="relative" left="-5.1vw" padding="0" margin="0" 
@@ -136,10 +136,10 @@ phone_number: 555-123-1234
       padding="0!important"
       margin-right="0!important"
     >
-      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer"}} color="white" id="top-link">How It Works</Box></a></Link>
-      <Link href="/reviews" ><a><Box _hover={{cursor: "pointer"}} color="white" id="top-link">Reviews</Box></a></Link>
-      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer"}} color="white" id="top-link">About Us</Box></a></Link>
-      <Link href="/sell-your-house"><a><Box _hover={{cursor: "pointer"}} p={3} borderRadius="5px" backgroundColor={primary_color} color="white" id="top-link">Sell Your House</Box></a></Link>
+      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">How It Works</Box></a></Link>
+      <Link href="/reviews" ><a><Box _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">Reviews</Box></a></Link>
+      <Link href="/how-it-works"><a><Box _hover={{cursor: "pointer", textDecoration: "underline"}} color="white" id="top-link">About Us</Box></a></Link>
+      <Link href="/sell-your-house"><a><Box borderRadius="5px" backgroundColor={primary_color} color="white" _hover={{cursor: "pointer", backgroundColor: darkened_primary}} p={3} >Sell Your House</Box></a></Link>
     </List>
   </Box>
   <Heading textAlign="center" mt={20} color="whiteAlpha.900">
@@ -616,7 +616,7 @@ phone_number: 555-123-1234
         {(linkedin_link) ? <Box padding="1em"><FaLinkedin padding="1em" size="24" /></Box> : null}
         {(youtube_link) ? <Box padding="1em"><FaYoutube padding="1em" size="24"/></Box> : null}
         
-        </Box>
-        </Box>
+    </Box>
+    </Box>
 </Box>
-</div>
+</Box>

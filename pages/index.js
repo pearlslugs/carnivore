@@ -93,10 +93,46 @@ export async function getStaticProps() {
   const primaryBrightness = brightnessByColor(colorObject.primary_color)
   const secondaryBrightness = brightnessByColor(colorObject.secondary_color)
   const accentBrightness = brightnessByColor(colorObject.accent_color)
-  
-  const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
-  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\n--- ${template}`;
-  console.log(source)
+  function LightenDarkenColor(colorCode, amount) {
+    var usePound = false;
+ 
+    if (colorCode[0] == "#") {
+        colorCode = colorCode.slice(1);
+        usePound = true;
+    }
+ 
+    var num = parseInt(colorCode, 16);
+ 
+    var r = (num >> 16) + amount;
+ 
+    if (r > 255) {
+        r = 255;
+    } else if (r < 0) {
+        r = 0;
+    }
+ 
+    var b = ((num >> 8) & 0x00FF) + amount;
+ 
+    if (b > 255) {
+        b = 255;
+    } else if (b < 0) {
+        b = 0;
+    }
+ 
+    var g = (num & 0x0000FF) + amount;
+ 
+    if (g > 255) {
+        g = 255;
+    } else if (g < 0) {
+        g = 0;
+    }
+ 
+    return (usePound ? "#" : "") + (g | (b << 8) | (r << 16)).toString(16);
+}
+  const darkenedPrimary = LightenDarkenColor(colorObject.primary_color, -30)
+  console.log(darkenedPrimary, "dark")
+
+  const source = `---\n${filteredYamlContent}\n${filteredAltText}\n${filteredColors}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nany_condition_background: "url(${anyConditionBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n--- ${template}`;
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {
     components,
