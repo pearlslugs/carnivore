@@ -1,4 +1,9 @@
 ---
 label: About Us Alt Tags
 hide_body: false
-fields: []
+fields:
+- name: image_of_you_alt_tag
+  type: text
+  config:
+    required: false
+  label: Image Of You Alt Tag
