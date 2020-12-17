@@ -19,3 +19,4 @@ fields:
   label: Get Your Cash Alt Tag
 pages:
 - src/content/how_it_works_alt_tags.yml
+- src/content/sell_your_house_alt_tags.yml
