@@ -1,4 +1,19 @@
 ---
 label: How It Works Al Tags
 hide_body: false
-fields: []
+fields:
+- name: fill_out_the_form_alt_tag
+  type: text
+  config:
+    required: false
+  label: Fill Out The Form Alt Tag
+- name: get_your_offer_alt_tag
+  type: text
+  config:
+    required: false
+  label: Get Your Offer Alt Tag
+- name: get_your_cash_alt_tag
+  type: text
+  config:
+    required: false
+  label: Get Your Cash Alt Tag
