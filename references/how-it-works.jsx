@@ -79,9 +79,7 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
          m={-3}
          >
          <Box display="flex" justifyContent="space-between">
-           <Box padding="1.5rem" margin="1.5rem" >
-            <Image src={logo} height="100px" width="100px" ml={5} mt={5} />
-           </Box>
+         <Link href="/"><a><Box _hover={{cursor: "pointer"}} margin="1.5rem" padding="1.5rem"><Image src={logo} height="100px" width="100px" ml={5} mt={5} /></Box></a></Link>
             <List
                display="flex"
                mr={5}
@@ -135,14 +133,14 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
          <Heading as="h2" size="md">
             {first_image_header}
          </Heading>
-         <Image src={number_one_image} height="100px" width="100px" mt={5} />
+         <Image alt={fill_out_the_form_alt_tag} src={number_one_image} height="100px" width="100px" mt={5} />
          <Text mt={5}>{number_one_content}</Text>
       </Box>
       <Box display="flex" alignItems="center" flexDirection="column">
          <Heading as="h2" size="md">
             {number_two_header}
          </Heading>
-         <Image src={number_two_image} height="100px" width="100px" mt={5} />
+         <Image alt={get_your_offer_alt_tag} src={number_two_image} height="100px" width="100px" mt={5} />
          <Text mt={5}>{number_two_content}</Text>
       </Box>
       <Box
@@ -154,7 +152,7 @@ conclusion_content: She tried to explain that love wasn't like pie. There wasn't
          <Heading as="h2" size="md">
             {number_three_header}
          </Heading>
-         <Image src={number_three_image} height="100px" width="100px" mt={5} />
+         <Image alt={get_your_cash_alt_tag} src={number_three_image} height="100px" width="100px" mt={5} />
          <Text mt={5}>{number_three_content}</Text>
       </Box>
    </Box>

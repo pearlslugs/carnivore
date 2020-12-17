@@ -84,7 +84,7 @@ accent_brightness: 132.536
 </Heading>
 <Box display="flex" flexDirection="row" justifyContent="center" alignItems="center" paddingTop="1rem">
    <Box width="50%" flexDirection="row" justifyContent="center" alignItems="center">
-      <Image src={image_of_you} padding="auto" margin="auto" height={300} width={300} mt={5} justifySelf="center" />
+      <Image src={image_of_you_alt_tag} padding="auto" margin="auto" height={300} width={300} mt={5} justifySelf="center" />
    </Box>
    <Text width="38%" mt={5} ml={5} mr={5}>
       {introduce_company_content}

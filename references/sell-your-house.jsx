@@ -119,14 +119,14 @@ clickable_number: "tel:555-123-1234"
       <Heading as="h2" size="md">
          {number_one_header}
       </Heading>
-      <Image src={number_one_image} height="100px" width="100px" mt={5} />
+      <Image alt={fill_out_the_form_alt_tag} src={number_one_image} height="100px" width="100px" mt={5} />
       <Text width="75%" mt={5}>{number_one_content}</Text>
    </Box>
    <Box display="flex" alignItems="center" flexDirection="column">
       <Heading as="h2" size="md">
          {number_two_header}
       </Heading>
-      <Image src={number_two_image} height="100px" width="100px" mt={5} />
+      <Image alt={get_your_offer_alt_tag} src={number_two_image} height="100px" width="100px" mt={5} />
       <Text width="75%" mt={5}>{number_two_content}</Text>
    </Box>
    <Box
@@ -138,7 +138,7 @@ clickable_number: "tel:555-123-1234"
       <Heading as="h2" size="md">
          {number_three_header}
       </Heading>
-      <Image src={number_three_image} height="100px" width="100px" mt={5} />
+      <Image alt={get_your_cash_alt_tag} src={number_three_image} height="100px" width="100px" mt={5} />
       <Text width="75%" mt={5}>{number_three_content}</Text>
    </Box>
 </Box>

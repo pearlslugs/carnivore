@@ -67,6 +67,7 @@ export async function getStaticProps() {
   let reusables = await fs.readFileSync("src/content/reusables.yml", "utf8");
   let personalYaml = await fs.readFileSync("src/content/Personal-Settings.yml", "utf8");
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
+  let altTags = await fs.readFileSync("src/content/sell_your_house_alt_tags.yml", "utf8");
   const heroBackground = reusablesInfo.hero_image
   const phoneNumber = personal.phone_number
 
@@ -74,10 +75,13 @@ export async function getStaticProps() {
   .then((data) => {
     return data;
   });
+
   const filteredYamlContent = yamlContent.split("---").join(' ')
   const filteredColors = colors.split("---").join(' ')
   const filteredReusables = reusables.split("---").join(' ')
   const filteredPersonal = personalYaml.split("---").join(' ')
+  const filteredAltTags = altTags.split("---").join(' ')
+
   function brightnessByColor (color) {
     var color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
     if (isHEX) {
@@ -133,7 +137,7 @@ export async function getStaticProps() {
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
 
-  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n--- ${template}`;
+  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}\n${filteredPersonal}\n${filteredAltTags}\nhero_background: "url(${heroBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n--- ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {
