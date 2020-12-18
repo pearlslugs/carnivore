@@ -137,7 +137,7 @@ export async function getStaticProps() {
   
   const brightnessObject = {primaryBrightness, secondaryBrightness, accentBrightness}
 
-  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}\n${filteredPersonal}\n${filteredAltTags}\nhero_background: "url(${heroBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n--- ${template}`;
+  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}\n${filteredPersonal}\n${filteredAltTags}\nhero_background: "url(${heroBackground})"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\n---\n ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

@@ -64,7 +64,7 @@ export async function getStaticProps() {
   let personalYaml = await fs.readFileSync("src/content/Personal-Settings.yml", "utf8");
   let yamlContent = await fs.readFileSync("src/content/about_us_content.yml", "utf8");
   let reusables = await fs.readFileSync("src/content/reusables.yml", "utf8");
-  let altTags = await fs.readFileSync("src/content/sell_your_house_alt_tags.yml", "utf8");
+  let altTags = await fs.readFileSync("src/content/about_us_alt_tags.yml", "utf8");
   let colors = await fs.readFileSync("src/content/colors.yml", "utf8");
   const colorObject = await yaml.safeLoad(fs.readFileSync('src/content/colors.yml', 'utf8'));
   const heroBackground = reusablesInfo.hero_image
@@ -134,7 +134,7 @@ export async function getStaticProps() {
 }
   const darkenedPrimary = LightenDarkenColor(colorObject.primary_color, -30)
  
-  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}n${filteredAltTags}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+  const source = `---\n${filteredColors}\n${filteredYamlContent}\n${filteredReusables}\n${filteredAltTags}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n---\n ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {

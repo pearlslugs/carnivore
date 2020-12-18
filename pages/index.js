@@ -6,7 +6,10 @@ import services from "../src/communication/services";
 import matter from "gray-matter";
 
 import Link from 'next/link'
+
 import Image from 'next/image'
+
+import sendEmail from '../src/communication/services'
 
 import {
   Box,
@@ -24,6 +27,47 @@ import {
 } from "@chakra-ui/react";
 import { CopyIcon } from "@chakra-ui/icons";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa"
+import { useForm } from "react-hook-form";
+
+const CtaForm = ({primary_color, button_text}) => {
+  const { register, handleSubmit, watch, errors } = useForm();
+  const onSubmit = async (data) => {
+    await sendEmail(data)
+  }
+  return(
+    <form onSubmit={handleSubmit(onSubmit)}>
+    <FormControl
+  mt={10}
+  width="80%"
+  ml="auto"
+  mr="auto"
+  backgroundColor="#f5f5f5"
+>
+  <FormErrorMessage>Error message</FormErrorMessage>
+  <Box p={10} >
+    <FormLabel>Property Address*</FormLabel>
+    <Input name="address" ref={register({required: true})} backgroundColor="#ffffff" />
+    <Box display="flex" justifyContent="space-between" p={0} m={0}>
+      <Box width="45%">
+        <FormLabel pt={5}>Phone*</FormLabel>
+        <Input name="phone" ref={register({required: true})} backgroundColor="#ffffff" />
+      </Box>
+      <Box width="45%">
+        <FormLabel pt={5}>Email*</FormLabel>
+        <Input name="email" ref={register({required: true})}  backgroundColor="#ffffff" />
+      </Box>
+    </Box>
+    <Box display="flex" justifyContent="center" mt={5}>
+      <input
+       type="submit"
+      />
+    </Box>
+  </Box>
+  </FormControl>
+  </form>
+  )
+}
+
 const components = {
   Box,
   Image,
@@ -45,6 +89,7 @@ const components = {
   FaInstagram,
   FaLinkedin,
   FaYoutube,
+  CtaForm
 };
 
 export default function HomePage({ source }) {
@@ -69,6 +114,8 @@ export async function getStaticProps() {
   const heroBackground = reusablesInfo.hero_image
   const phoneNumber = personal.phone_number
   
+  const clientEmailAddress = personal.email
+
   const template = await services.getPage(personal.template, 'template')
   .then((data) => {
     return data;

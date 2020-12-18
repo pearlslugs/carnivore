@@ -523,6 +523,7 @@ phone_number: 555-123-1234
     </Box>
   </Box>
   </FormControl>
+  <CtaForm primary_color={primary_color} button_text={button_text} />
   <Box height="3rem" width="100%" backgroundColor="white"></Box>
   <Box
       backgroundColor="#696969"

@@ -77,6 +77,8 @@ export async function getStaticProps() {
   const filteredColors = colors.split("---").join(' ')
   const filteredReusables = reusables.split("---").join(' ')
   const filteredPersonal = personalYaml.split("---").join(' ')
+  const filteredAltTags = altTags.split("---").join(' ')
+  
 
   function brightnessByColor (color) {
     var color = "" + color, isHEX = color.indexOf("#") == 0, isRGB = color.indexOf("rgb") == 0;
@@ -132,7 +134,7 @@ export async function getStaticProps() {
 }
   const darkenedPrimary = LightenDarkenColor(colorObject.primary_color, -30)
 
-  const source = `---\n${filteredYamlContent}\n${filteredColors}\n${altTags}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n--- ${template}`;
+  const source = `---\n${filteredYamlContent}\n${filteredColors}\n${filteredAltTags}\n${filteredReusables}\n${filteredPersonal}\nhero_background: "url(${heroBackground})"\nclickable_number: "tel:${phoneNumber}"\ndarkened_primary: "${darkenedPrimary}"\nprimary_brightness: ${primaryBrightness}\nsecondary_brightness: ${secondaryBrightness}\naccent_brightness: ${accentBrightness}\n---\n ${template}`;
   console.log(source)
   const { content, data } = matter(source);
   const mdxSource = await renderToString(content, {
