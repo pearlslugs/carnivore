@@ -8,5 +8,4 @@ fields:
     required: false
   label: Image Of You Alt Tag
 pages:
-- src/content/about_us_alt_tags-1.yml
 - src/content/about_us_alt_tags.yml
