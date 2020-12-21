@@ -1,6 +1,7 @@
 ---
 label: About US Page Content
 hide_body: false
+display_field: introduce_company_content
 fields:
 - name: hero_header
   type: text
