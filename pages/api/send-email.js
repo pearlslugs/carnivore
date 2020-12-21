@@ -1,11 +1,11 @@
 import { NextApiRequest, NextApiResponse  } from 'next';
 
-import { sendEmail } from '../../utils/sendEmail';
+import { sendEmail } from '../../src/communication/sendEmail';
 
 export default async (req, res) => {
     if(req.method === 'POST') {
-      const { name, clientEmail, emailAddress, propertyAddress, phone } = req.body;
-      await sendEmail({ name, clientEmail, emailAddress, propertyAddress, phone });
+      const {clientEmail, emailAddress, propertyAddress, phone } = req.body;
+      await sendEmail({clientEmail, emailAddress, propertyAddress, phone });
       return res.status(200).end();
     }
     return res.status(404).json({

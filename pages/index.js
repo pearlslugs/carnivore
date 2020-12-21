@@ -9,8 +9,6 @@ import Link from 'next/link'
 
 import Image from 'next/image'
 
-import sendEmail from '../src/communication/services'
-
 import {
   Box,
   List,
@@ -29,10 +27,14 @@ import { CopyIcon } from "@chakra-ui/icons";
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin, FaYoutube} from "react-icons/fa"
 import { useForm } from "react-hook-form";
 
-const CtaForm = ({primary_color, button_text}) => {
+const CtaForm = ({primary_color, button_text, clientEmail}) => {
+  console.log(clientEmail)
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = async (data) => {
-    await sendEmail(data)
+    const sentEmail = {...data, clientEmail}
+    console.log(sentEmail)
+    const sendEmail = await services.sendEmail(sentEmail)
+      .then(res => console.log(res))
   }
   return(
     <form onSubmit={handleSubmit(onSubmit)}>
@@ -46,7 +48,7 @@ const CtaForm = ({primary_color, button_text}) => {
   <FormErrorMessage>Error message</FormErrorMessage>
   <Box p={10} >
     <FormLabel>Property Address*</FormLabel>
-    <Input name="address" ref={register({required: true})} backgroundColor="#ffffff" />
+    <Input name="propertyAddress" ref={register({required: true})} backgroundColor="#ffffff" />
     <Box display="flex" justifyContent="space-between" p={0} m={0}>
       <Box width="45%">
         <FormLabel pt={5}>Phone*</FormLabel>
@@ -54,7 +56,7 @@ const CtaForm = ({primary_color, button_text}) => {
       </Box>
       <Box width="45%">
         <FormLabel pt={5}>Email*</FormLabel>
-        <Input name="email" ref={register({required: true})}  backgroundColor="#ffffff" />
+        <Input name="emailAddress" ref={register({required: true})}  backgroundColor="#ffffff" />
       </Box>
     </Box>
     <Box display="flex" justifyContent="center" mt={5}>
@@ -114,7 +116,6 @@ export async function getStaticProps() {
   const heroBackground = reusablesInfo.hero_image
   const phoneNumber = personal.phone_number
   
-  const clientEmailAddress = personal.email
 
   const template = await services.getPage(personal.template, 'template')
   .then((data) => {

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const userUrl = '/api/getUser/:id'
-const emailUrl = 'api/send-email'
+const emailUrl = 'api/test'
 const templateUrl = 'http://localhost:3000/api/getTemplate/:id'
 
 const getUser = (email) => {

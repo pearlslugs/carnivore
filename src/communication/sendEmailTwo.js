@@ -1,10 +1,12 @@
 import fetch from 'node-fetch'
+import sgMail from '@sendgrid/mail'
 
-const SENDGRID_API = 'https://api.sendgrid.com/v3/mail/send'
-const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY
+const mail = new sgMail();
+
+mail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const sendEmail = async ({ clientEmail, emailAddress, propertyAddress, phone}) => {
-    console.log(clientEmail, emailAddress, propertyAddress, phone)
+    
     await fetch(SENDGRID_API, {
         method: 'POST',
         headers: {
