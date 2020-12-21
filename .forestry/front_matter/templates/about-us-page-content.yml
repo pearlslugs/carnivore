@@ -32,6 +32,11 @@ fields:
     your traffic about yourself. Talk about your “Why” and how you started this business.
     Use images to back up your story. For example, if you talk about your family then
     also include a photo with you and your family."
+- name: connect_with_traffic_header
+  type: text
+  config:
+    required: false
+  label: Connect with Traffic Header
 - name: connect_with_traffic_banner
   type: text
   config:
